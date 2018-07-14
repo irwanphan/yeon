@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>greatman eduhome</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== --> 
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+
+    <!-- Included CSS files 
+    ================================================== -->
+
+    <link rel="stylesheet" type="text/css"  href="assets/css/morph.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,‌​100italic,300,300ita‌​lic,400italic,500,50‌​0italic,700,700itali‌​c,900italic,900' rel='stylesheet' type='text/css'>
+
+    <!-- DataTable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+
+    <!-- Included javascript files 
+    ================================================== -->
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#table-document').DataTable( {
+                responsive: true,
+                iDisplayLength: 20,
+                bLengthChange: false
+            } );
+        } );
+    </script>
+
+</head>
+
+<body>
+
+<input type="checkbox" name="user" id="user-profile">
+<label class="user-profile" for="user-profile">
+    <div class="user-profile-img">
+        <img src="">
+    </div>
+    <span class="user-profile-name">
+        John Doe of The Crimson Heaven
+    </span>
+</label>
+
+<header>
+    <!-- <a href="index.html" class="material-icons">keyboard_arrow_left</a> -->
+    <!-- <span class="breadcrumb">qwertyuiop</span> -->
+    <nav>
+        <a href="" class="button theme">
+            <i class="material-icons">home</i>
+            <span>Home</span>
+        </a>
+        <a href="" class="button theme">
+            <i class="material-icons">add</i>
+            <span>New Document</span>
+        </a>
+    </nav>
+</header>
+
+<div class="main">
+    <div class="container">
+        <span class="section-title">Daftar Dokumen Menunggu</span>
+
+        <table id="table-document" class="display">
+            <thead>
+                <tr>
+                    <th><p>#</p></th>
+                    <th><p>Created at</p></th>
+                    <th><p>Something</p></th>
+                    <th><p>Culprit</p></th>
+                    <th><p>Progress</p></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>March 1,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Not a lorem ipsum thing</p>
+                    </td>
+                    <td>
+                        <p>Anna Doe</p>
+                    </td>
+                    <td>
+                        <p>March 5,2016 10:18 <span class="bold">something happended</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>March 1,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Told you not lorem ipsum</p>
+                    </td>
+                    <td>
+                        <p>Nina Doe</p>
+                    </td>
+                    <td>
+                        <p>March 5,2016 12:18 <span class="bold">verified</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>3</p>
+                    </td>
+                    <td>
+                        <p>March 2,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Surveying local market</p>
+                    </td>
+                    <td>
+                        <p>Anna Doe</p>
+                    </td>
+                    <td>
+                        <p>March 5,2016 12:34 <span class="bold">approved</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>4</p>
+                    </td>
+                    <td>
+                        <p>March 2,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Gotta eat lobster</p>
+                    </td>
+                    <td>
+                        <p>Eddy Doe</p>
+                    </td>
+                    <td>
+                        <p>March 5,2016 12:22 <span class="bold">checkup for LDL</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>5</p>
+                    </td>
+                    <td>
+                        <p>March 1,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Lorem what?</p>
+                    </td>
+                    <td>
+                        <p>Hectic Doe</p>
+                    </td>
+                    <td>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>6</p>
+                    </td>
+                    <td>
+                        <p>March 1,2016 10:18</p>
+                    </td>
+                    <td>
+                        <p>Nope, no more please</p>
+                    </td>
+                    <td>
+                        <p>Joanna Doe</p>
+                    </td>
+                    <td>
+                        <p></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+
+</footer>
+
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+</body>
+
+</html>
+
+

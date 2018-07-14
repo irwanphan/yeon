@@ -1,0 +1,359 @@
+// color
+$black: #000
+$white: #fff
+
+$white-min: #fafafa
+$grey-light: #dedede
+$grey: #888
+$grey-dark: #2e2e2e
+
+$yellow: #fdffab
+$blue: #a8e6cf
+$pink: #ffd3b6
+
+$theme: $blue
+
+// class
+$browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
+=transitions ($sec)
+	@each $browser in $browsers
+		#{$browser}transition: all $sec ease
+=borderradius ($radius: 50%)
+	@each $browser in $browsers
+		#{$browser}border-radius: $radius
+=centery
+	-webkit-box-align: center !important
+	-webkit-align-items: center !important
+	-ms-flex-align: center !important
+	align-items: center !important
+=squareicon ($size)
+	width: $size
+	height: $size
+	line-height: $size
+	text-align: center
+=clearfix
+	content: ""
+	display: block
+	clear: both
+	float: none
+=boxsizing
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+=mixbutton($color)
+	color: $grey-dark
+	background-color: $color
+	&:hover, &:active, &:focus
+		background-color: darken($color, 5%)
+=aspectratio($width, $height)
+	position: relative
+	&:before
+		display: block
+		content: ""
+		width: 100%
+		padding-top: ($height / $width) * 100%
+	> .mask
+		+absolutecenter
+=dimension($width, $height)
+	width: $width
+	height: $height
+	line-height: $height
+	text-align: center
+=absolutecenter
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+=shadow($color: rgba(255,255,255,.168))
+	@each $browser in $browsers
+		#{$browser}box-shadow: 0 2px 1px 1px $color
+
+// container
+.full-width
+	width: 100%
+.container
+	width: 100%
+	padding: 16px
+
+// quick fix
+// grid fix
+.hidden
+	display: none
+.small-hidden
+	@media(max-width: 960px)
+		display: none !important
+.large-hidden
+	@media(min-width: 961px)
+		display: none !important
+.overflow-hidden
+	overflow: hidden
+.center-y
+	+centery
+.center
+	text-align: center
+.align-left
+	text-align: left
+.align-right
+	text-align: right	
+.self-center, .centered
+	margin: 0 auto
+.left
+	float: left
+.right
+	float: right
+
+// quick fix
+.icon-right
+	position: absolute
+	right: 40px
+	margin-top: 2px
+	color: lighten($grey, 5%)
+.half-container
+	width: 100%
+	@media(min-width: 961px)
+		width: 50%
+.float-action
+	position: fixed
+	@media(min-width: 961px)
+	@media(max-width: 960px)
+		bottom: 0
+		left: 0
+
+.ellipsis
+	text-overflow: ellipsis
+	/* Required for text-overflow to do anything */
+	white-space: nowrap
+	overflow: hidden
+
+// mixed components default styling
+*, *:before, *:after
+	box-sizing: border-box
+html, body
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	font-family: Roboto, "open sans", arial, sans-serif
+	background-color: $white-min
+	padding: 0
+	margin: 0
+	font-size: 20px
+	color: $grey-dark
+a
+	text-decoration: none
+	color: inherit
+	&:hover, &:active, &:focus, &:visited
+		color: inherit
+	&.button
+		// padding: 4px 8px
+		font-size: 16px
+	&.disabled
+		color: $grey
+		cursor: not-allowed
+ul
+	list-style: none
+	padding-left: 0
+ul, li, a, input, input ~ label, button, select
+	+transitions(.3s)
+input[type="radio"], input[type="submit"], input[type="checkbox"], a
+	cursor: pointer
+	& ~ label
+		cursor: pointer
+.button
+	+borderradius(20px)
+	text-align: center
+	display: inline-block
+	margin-bottom: 4px
+	&.theme
+		+mixbutton($theme)
+	&.pink
+		+mixbutton($pink)
+	&.yellow
+		+mixbutton($yellow)
+.inverse
+	color: $grey
+	background-color: $white
+	border: 1px solid $grey
+	&:hover, &:active, &:focus, &.active
+		color: $white
+.clear
+	+clearfix
+
+// form styling
+.form-default
+	hr
+		width: 100%
+		border-top: 1px solid $grey-light
+	fieldset
+		width: 100%
+		display: block
+		border: 0
+		padding: 0
+		margin-bottom: 12px
+	> label
+		display: inline-block
+		vertical-align: top
+		text-transform: capitalize
+		line-height: 36px
+	select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], textarea
+		border: 1px solid darken($grey-light, 10%)
+		padding: 6px
+		margin-bottom: 6px
+		+borderradius(6px)
+		&:hover, &:active, &:focus
+			border-color: $theme
+	// select2 quick fixes
+	.select2-selection
+		border: 1px solid darken($grey-light, 10%) !important
+		padding: 0 6px
+		height: 32px !important
+		margin-bottom: 6px
+		font-size: 14px
+		+borderradius(6px)
+		+transitions(.3s)
+		box-sizing: border-box !important
+		&:hover, &:active, &:focus
+			border-color: $theme !important
+	#select2-select-ingredient-container
+		padding: 0
+	// // //
+	textarea
+		resize: none
+		height: 108px
+	select
+		cursor: pointer
+	input[type="submit"], input[type="reset"], button
+		display: inline-block
+		border: 0
+		padding: 5px 8px
+		font-size: 16px
+	input[type=number]::-webkit-inner-spin-button
+		-webkit-appearance: none
+		cursor: pointer
+		display: block
+		width: 8px
+		color: #333
+		text-align: center
+		position: relative
+	input[type=number]
+		-moz-appearance: textfield
+	small
+		font-size: 14px
+		text-transform: uppercase
+		&.standout
+			font-size: 18px
+			font-weight: 700
+			display: block
+
+// main
+// header
+#user-profile
+	display: none
+label.user-profile
+	margin: 0
+	padding-right: 48px
+	position: fixed
+	top: 16px
+	right: 16px
+	left: 16px
+	width: 100%
+	+borderradius(20px)
+	@extend .ellipsis
+	.user-profile-img
+		+dimension(40px, 40px)
+		+borderradius()
+		background-color: $theme
+		display: inline-block
+		overflow: hidd
+	.user-profile-name
+		font-size: 16px
+		line-height: 40px
+	@media(min-width: 721px)
+		padding-right: 16px
+		background-color: lighten($theme, 17%)
+		margin: 4px 16px
+		width: auto
+		top: 0
+		right: 0
+		left: auto
+header
+	height: 68px
+	position: fixed
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 88
+	+shadow()
+	nav
+		padding: 4px 16px
+		.button
+			i.material-icons, span
+				+dimension(auto, 40px)
+				min-width: 40px
+				float: left
+			span
+				margin-right: 16px
+				display: none
+	@media(min-width: 721px)
+		// background-color: $white-min
+		top: 0
+		height: 50px
+		nav	.button
+			i.material-icons, span
+				display: inline-block
+
+// main body
+.main
+	// padding-top: 50px
+	position: fixed
+	top: 68px
+	left: 0
+	right: 0
+	bottom: 0
+	overflow-y: auto
+	.container
+		position: relative
+		padding: 16px
+		&:last-child
+			margin-bottom: 50px
+	.section-title
+		text-transform: uppercase
+		color: $grey-dark
+		font-size: 16px
+		font-weight: 500
+	@media(min-width: 721px)
+		bottom: 0
+		top: 50px
+
+// quick fix for DataTable
+table
+	font-size: 16px
+	&.display
+		margin-bottom: 8px !important
+	p
+		margin: 0
+	tr, td, th
+		vertical-align: top
+#table-document_wrapper
+	padding-top: 16px
+	font-size: 16px
+// remove show entry filter
+#table-document_filter
+	float: left
+	input[type="search"]
+		+boxsizing
+		+borderradius(20px)
+		padding: 6px 12px
+		border: 1px solid $theme
+#table-document_paginate, #table-document_info
+	font-size: 12px
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover
+	background: none !important
+	border: 1px solid $theme !important
+	+borderradius(16px)
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:active
+	color: $white !important
+	background: $theme !important
+	border: 1px solid $theme !important
+	+borderradius(16px)
+.dataTables_wrapper .dataTables_paginate .paginate_button
+	+borderradius()
