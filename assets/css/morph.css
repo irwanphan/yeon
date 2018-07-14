@@ -348,7 +348,6 @@ table {
   -webkit-border-radius: 16px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:active {
-  color: #fff !important;
   background: #a8e6cf !important;
   border: 1px solid #a8e6cf !important;
   border-radius: 16px;
