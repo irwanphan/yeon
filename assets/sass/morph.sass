@@ -248,6 +248,19 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 // header
 #user-profile
 	display: none
+	&:checked
+		~
+			.side-menu
+				z-index: 89
+				left: 0
+	@media(min-width: 721px)			
+		&:checked
+			~
+				.side-menu
+					right: 0
+					left: auto
+					.base-layer
+						opacity: 1
 label.user-profile
 	margin: 0
 	padding-right: 48px
@@ -256,6 +269,7 @@ label.user-profile
 	right: 16px
 	left: 16px
 	width: 100%
+	z-index: 89
 	+borderradius(20px)
 	@extend .ellipsis
 	.user-profile-img
@@ -275,6 +289,38 @@ label.user-profile
 		top: 0
 		right: 0
 		left: auto
+// right side menu
+.side-menu
+	width: 100%
+	position: fixed
+	top: 64px
+	left: -720px
+	bottom: 0
+	padding: 16px 0
+	background-color: $white-min
+	z-index: -1
+	a
+		display: block
+		padding: 8px 16px
+		&:hover, &:active, &:focus
+			color: $theme
+	hr
+		margin: 16px
+		border-color: $grey-light
+	@media(min-width: 721px)
+		text-align: center
+		width: 360px
+		left: auto
+		right: -360px
+.base-layer
+	+transitions(.77s)
+	position: fixed
+	top: 0
+	left: 0
+	right: 360px
+	bottom: 0
+	background-color: rgba(0,0,0,0.08)
+	opacity: 0
 header
 	height: 68px
 	position: fixed

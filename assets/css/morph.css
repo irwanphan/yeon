@@ -218,7 +218,15 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
 
 #user-profile {
   display: none; }
-
+  #user-profile:checked ~ .side-menu {
+    z-index: 89;
+    left: 0; }
+@media(min-width: 721px) {
+  #user-profile:checked ~ .side-menu {
+    right: 0;
+    left: auto; }
+    #user-profile:checked ~ .side-menu .base-layer {
+      opacity: 1; } }
 label.user-profile {
   margin: 0;
   padding-right: 48px;
@@ -227,6 +235,7 @@ label.user-profile {
   right: 16px;
   left: 16px;
   width: 100%;
+  z-index: 89;
   border-radius: 20px;
   -o-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -257,6 +266,43 @@ label.user-profile {
     top: 0;
     right: 0;
     left: auto; } }
+.side-menu {
+  width: 100%;
+  position: fixed;
+  top: 64px;
+  left: -720px;
+  bottom: 0;
+  padding: 16px 0;
+  background-color: #fafafa;
+  z-index: -1; }
+  .side-menu a {
+    display: block;
+    padding: 8px 16px; }
+    .side-menu a:hover, .side-menu a:active, .side-menu a:focus {
+      color: #a8e6cf; }
+  .side-menu hr {
+    margin: 16px;
+    border-color: #dedede; }
+@media(min-width: 721px) {
+  .side-menu {
+    text-align: center;
+    width: 360px;
+    left: auto;
+    right: -360px; } }
+.base-layer {
+  transition: all 0.77s ease;
+  -o-transition: all 0.77s ease;
+  -ms-transition: all 0.77s ease;
+  -moz-transition: all 0.77s ease;
+  -webkit-transition: all 0.77s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 360px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.08);
+  opacity: 0; }
+
 header {
   height: 68px;
   position: fixed;
