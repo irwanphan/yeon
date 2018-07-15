@@ -142,79 +142,60 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   clear: both;
   float: none; }
 
-.form-default hr {
-  width: 100%;
-  border-top: 1px solid #dedede; }
-.form-default fieldset {
-  width: 100%;
-  display: block;
-  border: 0;
-  padding: 0;
-  margin-bottom: 12px; }
-.form-default > label {
-  display: inline-block;
-  vertical-align: top;
-  text-transform: capitalize;
-  line-height: 36px; }
-.form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
-  border: 1px solid #c5c5c5;
-  padding: 6px;
-  margin-bottom: 6px;
-  border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px; }
-  .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
-    border-color: #a8e6cf; }
-.form-default .select2-selection {
-  border: 1px solid #c5c5c5 !important;
-  padding: 0 6px;
-  height: 32px !important;
-  margin-bottom: 6px;
-  font-size: 14px;
-  border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  box-sizing: border-box !important; }
-  .form-default .select2-selection:hover, .form-default .select2-selection:active, .form-default .select2-selection:focus {
-    border-color: #a8e6cf !important; }
-.form-default #select2-select-ingredient-container {
-  padding: 0; }
-.form-default textarea {
-  resize: none;
-  height: 108px; }
-.form-default select {
-  cursor: pointer; }
-.form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
-  display: inline-block;
-  border: 0;
-  padding: 5px 8px;
+.form-default {
   font-size: 16px; }
-.form-default input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  cursor: pointer;
-  display: block;
-  width: 8px;
-  color: #333;
-  text-align: center;
-  position: relative; }
-.form-default input[type=number] {
-  -moz-appearance: textfield; }
-.form-default small {
-  font-size: 14px;
-  text-transform: uppercase; }
-  .form-default small.standout {
-    font-size: 18px;
-    font-weight: 700;
-    display: block; }
+  .form-default hr {
+    width: 100%;
+    border-top: 1px solid #dedede; }
+  .form-default fieldset {
+    width: 100%;
+    display: block;
+    border: 0;
+    padding: 0;
+    margin-bottom: 12px; }
+  .form-default > label {
+    display: block;
+    text-transform: capitalize;
+    line-height: 36px; }
+  .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
+    border: 1px solid #c5c5c5;
+    padding: 6px 12px;
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    display: block;
+    margin-bottom: 6px; }
+    .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
+      border-color: #a8e6cf; }
+  .form-default textarea {
+    resize: none;
+    height: 108px; }
+  .form-default select {
+    cursor: pointer; }
+  .form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
+    display: inline-block;
+    border: 0;
+    padding: 5px 8px;
+    font-size: 16px; }
+  .form-default input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    display: block;
+    width: 8px;
+    color: #333;
+    text-align: center;
+    position: relative; }
+  .form-default input[type=number] {
+    -moz-appearance: textfield; }
+  .form-default small {
+    font-size: 14px;
+    text-transform: uppercase; }
+    .form-default small.standout {
+      font-size: 18px;
+      font-weight: 700;
+      display: block; }
 
 #user-profile {
   display: none; }

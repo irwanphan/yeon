@@ -180,6 +180,7 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 
 // form styling
 .form-default
+	font-size: 16px
 	hr
 		width: 100%
 		border-top: 1px solid $grey-light
@@ -190,32 +191,18 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		padding: 0
 		margin-bottom: 12px
 	> label
-		display: inline-block
-		vertical-align: top
+		display: block
+		// vertical-align: top
 		text-transform: capitalize
 		line-height: 36px
 	select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], textarea
 		border: 1px solid darken($grey-light, 10%)
-		padding: 6px
+		padding: 6px 12px
+		+borderradius(16px)
+		display: block
 		margin-bottom: 6px
-		+borderradius(6px)
 		&:hover, &:active, &:focus
 			border-color: $theme
-	// select2 quick fixes
-	.select2-selection
-		border: 1px solid darken($grey-light, 10%) !important
-		padding: 0 6px
-		height: 32px !important
-		margin-bottom: 6px
-		font-size: 14px
-		+borderradius(6px)
-		+transitions(.3s)
-		box-sizing: border-box !important
-		&:hover, &:active, &:focus
-			border-color: $theme !important
-	#select2-select-ingredient-container
-		padding: 0
-	// // //
 	textarea
 		resize: none
 		height: 108px
