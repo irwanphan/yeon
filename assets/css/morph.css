@@ -209,6 +209,12 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   .form-default .button.form {
     width: 100%;
     margin: 8px 0; }
+  .form-default span.info {
+    display: block;
+    font-weight: 500;
+    line-height: 28px; }
+    .form-default span.info:last-child {
+      margin-bottom: 12px; }
 
 #user-profile {
   display: none; }
