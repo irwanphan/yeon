@@ -13,6 +13,8 @@ $pink: #ffd3b6
 
 $theme: $blue
 
+// font
+$font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
 // class
 $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 =transitions ($sec)
@@ -132,7 +134,7 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 	box-sizing: border-box
 html, body
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-	font-family: Roboto, "open sans", arial, sans-serif
+	font-family: $font-family
 	background-color: $white-min
 	padding: 0
 	margin: 0
@@ -200,14 +202,20 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		padding: 6px 12px
 		+borderradius(16px)
 		display: block
+		width: 100%
 		margin-bottom: 6px
 		&:hover, &:active, &:focus
 			border-color: $theme
 	textarea
 		resize: none
 		height: 108px
+		+borderradius(16px)
+		width: 100%
+		font-family: $font-family
 	select
 		cursor: pointer
+	select.multiple
+		height: auto
 	input[type="submit"], input[type="reset"], button
 		display: inline-block
 		border: 0
@@ -224,13 +232,15 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 	input[type=number]
 		-moz-appearance: textfield
 	small
-		font-size: 14px
+		font-size: 12px
 		text-transform: uppercase
-		&.standout
-			font-size: 18px
-			font-weight: 700
-			display: block
-
+		display: block
+		line-height: 16px
+		margin: -8px 0 8px
+		color: $grey
+	.button.form
+		width: 100%
+		margin: 8px 0
 // main
 // header
 #user-profile
@@ -365,7 +375,13 @@ table
 	p
 		margin: 0
 	tr, td, th
-		vertical-align: top
+		vertical-align: middle
+	.button.theme
+		padding: 4px 16px
+		i.material-icons
+			float: left
+			font-size: 16px
+			margin-right: 8px
 #table-document_wrapper
 	padding-top: 16px
 	font-size: 16px

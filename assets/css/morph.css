@@ -70,7 +70,7 @@
 
 html, body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  font-family: Roboto, "open sans", arial, sans-serif;
+  font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif;
   background-color: #fafafa;
   padding: 0;
   margin: 0;
@@ -166,14 +166,24 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     -moz-border-radius: 16px;
     -webkit-border-radius: 16px;
     display: block;
+    width: 100%;
     margin-bottom: 6px; }
     .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
       border-color: #a8e6cf; }
   .form-default textarea {
     resize: none;
-    height: 108px; }
+    height: 108px;
+    border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    width: 100%;
+    font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
   .form-default select {
     cursor: pointer; }
+  .form-default select.multiple {
+    height: auto; }
   .form-default input[type="submit"], .form-default input[type="reset"], .form-default button {
     display: inline-block;
     border: 0;
@@ -190,12 +200,15 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   .form-default input[type=number] {
     -moz-appearance: textfield; }
   .form-default small {
-    font-size: 14px;
-    text-transform: uppercase; }
-    .form-default small.standout {
-      font-size: 18px;
-      font-weight: 700;
-      display: block; }
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 16px;
+    margin: -8px 0 8px;
+    color: #888; }
+  .form-default .button.form {
+    width: 100%;
+    margin: 8px 0; }
 
 #user-profile {
   display: none; }
@@ -342,7 +355,13 @@ table {
   table p {
     margin: 0; }
   table tr, table td, table th {
-    vertical-align: top; }
+    vertical-align: middle; }
+  table .button.theme {
+    padding: 4px 16px; }
+    table .button.theme i.material-icons {
+      float: left;
+      font-size: 16px;
+      margin-right: 8px; }
 
 #table-document_wrapper {
   padding-top: 16px;

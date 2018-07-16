@@ -78,8 +78,8 @@
     <!-- <span class="breadcrumb">qwertyuiop</span> -->
     <nav>
         <a href="index.html" class="button theme">
-            <i class="material-icons">home</i>
-            <span>Home</span>
+            <i class="material-icons">close</i>
+            <span>Batal</span>
         </a>
         <!-- <a href="" class="button theme">
             <i class="material-icons">add</i>
@@ -95,9 +95,46 @@
         <form class="form-default">
             <label>
                 Jenis Surat
+                <select>
+                    <option disabled="disabled" selected>--- Pilih format ---</option>
+                    <option>Surat dari Hokkaido</option>
+                    <option>Suratan takdir</option>
+                </select>
+            </label>
+            <label>
+                Tanggal Surat
                 <input type="text" name="">
             </label>
-
+            <label>
+                Ditandatangani oleh
+                <input type="text" name="">
+            </label>
+            <label>
+                Jabatan
+                <input type="text" name="">
+            </label>
+            <label>
+                Pemeriksa
+                <small>Tahan Ctrl atau Shift untuk memilih lebih dari satu</small>
+                <select multiple class="multiple">
+                    <option disabled="disabled" selected>--- Pilih pemeriksa ---</option>
+                    <option>Walikota</option>
+                    <option>Kepala Seksi 1</option>
+                    <option>Kepala Seksi 2</option>
+                    <option>Kepala Seksi 3</option>
+                    <option>Kepala Seksi 4</option>
+                    <option>Kepala Seksi 5</option>
+                </select>
+            </label>
+            <label>
+                Isi surat
+                <textarea></textarea>
+            </label>
+            <label>
+                Catatan
+                <textarea></textarea>
+            </label>
+            <button class="button theme form">Proses</button>
         </form>
     </div>
 </div>
