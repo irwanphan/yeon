@@ -51,7 +51,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#table-document').DataTable( {
+            $('#table-templates').DataTable( {
                 responsive: true,
                 iDisplayLength: 20,
                 bLengthChange: false
@@ -62,7 +62,7 @@
 </head>
 
 <body>
-
+    
 <input type="checkbox" name="user" id="user-profile">
 <label class="user-profile" for="user-profile">
     <div class="user-profile-img">
@@ -74,8 +74,8 @@
 </label>
 
 <label class="side-menu" for="user-profile">
-    <a href="templates.html">Templates</a>
-    <a href="">Users</a>
+    <a href="templates.html" disabled>Templates</a>
+    <a href="users.html">Users</a>
     <hr>
     <a href="">Log out</a>
 
@@ -90,23 +90,21 @@
         </a>
         <a href="new.html" class="button theme">
             <i class="material-icons">add</i>
-            <span>New Document</span>
+            <span>New Template</span>
         </a>
     </nav>
 </header>
 
 <div class="main">
     <div class="container">
-        <span class="section-title">Daftar Dokumen Menunggu</span>
+        <span class="section-title">Daftar Template</span>
 
-        <table id="table-document" class="display">
+        <table id="table-templates" class="display">
             <thead>
                 <tr>
                     <th><p>#</p></th>
-                    <th><p>Tanggal</p></th>
-                    <th><p>Tentang</p></th>
-                    <th><p>Oleh</p></th>
-                    <th><p>Progress</p></th>
+                    <th><p>Judul</p></th>
+                    <th><p>PIC</p></th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -116,19 +114,13 @@
                         <p>1</p>
                     </td>
                     <td>
-                        <p>March 1,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Not a lorem ipsum thing</p>
                     </td>
                     <td>
                         <p>Anna Doe</p>
                     </td>
                     <td>
-                        <p>March 5,2016 10:18 <span class="bold">something happended</span></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -139,19 +131,13 @@
                         <p>2</p>
                     </td>
                     <td>
-                        <p>March 1,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Told you not lorem ipsum</p>
                     </td>
                     <td>
                         <p>Nina Doe</p>
                     </td>
                     <td>
-                        <p>March 5,2016 12:18 <span class="bold">verified</span></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -162,19 +148,13 @@
                         <p>3</p>
                     </td>
                     <td>
-                        <p>March 2,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Surveying local market</p>
                     </td>
                     <td>
                         <p>Anna Doe</p>
                     </td>
                     <td>
-                        <p>March 5,2016 12:34 <span class="bold">approved</span></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -185,19 +165,13 @@
                         <p>4</p>
                     </td>
                     <td>
-                        <p>March 2,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Gotta eat lobster</p>
                     </td>
                     <td>
                         <p>Eddy Doe</p>
                     </td>
                     <td>
-                        <p>March 5,2016 12:22 <span class="bold">checkup for LDL</span></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -208,19 +182,13 @@
                         <p>5</p>
                     </td>
                     <td>
-                        <p>March 1,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Lorem what?</p>
                     </td>
                     <td>
                         <p>Hectic Doe</p>
                     </td>
                     <td>
-                        <p></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -231,19 +199,13 @@
                         <p>6</p>
                     </td>
                     <td>
-                        <p>March 1,2016 10:18</p>
-                    </td>
-                    <td>
                         <p>Nope, no more please</p>
                     </td>
                     <td>
                         <p>Joanna Doe</p>
                     </td>
                     <td>
-                        <p></p>
-                    </td>
-                    <td>
-                        <a href="view.html" class="button theme">
+                        <a href="templateEdit.html" class="button theme">
                             <i class="material-icons">edit</i>
                             Cek
                         </a>
@@ -254,16 +216,6 @@
     </div>
 </div>
 
-<footer>
-
-</footer>
-
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
 </body>
 
 </html>
-
-
