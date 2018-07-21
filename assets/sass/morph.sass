@@ -388,19 +388,20 @@ table
 			float: left
 			font-size: 16px
 			margin-right: 8px
-#table-document_wrapper
-	padding-top: 16px
-	font-size: 16px
-// remove show entry filter
-#table-document_filter
-	float: left
-	input[type="search"]
-		+boxsizing
-		+borderradius(20px)
-		padding: 6px 12px
-		border: 1px solid $theme
-#table-document_paginate, #table-document_info
-	font-size: 12px
+#table-document, #table-templates
+	&_wrapper
+		padding-top: 16px
+		font-size: 16px
+	// remove show entry filter
+	&_filter
+		float: left
+		input[type="search"]
+			+boxsizing
+			+borderradius(20px)
+			padding: 6px 12px
+			border: 1px solid $theme
+	&_paginate, &_info
+		font-size: 12px
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover
 	background: none !important
 	border: 1px solid $theme !important

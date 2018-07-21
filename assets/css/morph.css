@@ -369,13 +369,12 @@ table {
       font-size: 16px;
       margin-right: 8px; }
 
-#table-document_wrapper {
+#table-document_wrapper, #table-templates_wrapper {
   padding-top: 16px;
   font-size: 16px; }
-
-#table-document_filter {
+#table-document_filter, #table-templates_filter {
   float: left; }
-  #table-document_filter input[type="search"] {
+  #table-document_filter input[type="search"], #table-templates_filter input[type="search"] {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -386,8 +385,7 @@ table {
     -webkit-border-radius: 20px;
     padding: 6px 12px;
     border: 1px solid #a8e6cf; }
-
-#table-document_paginate, #table-document_info {
+#table-document_paginate, #table-document_info, #table-templates_paginate, #table-templates_info {
   font-size: 12px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
