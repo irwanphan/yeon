@@ -216,6 +216,24 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     .form-default span.info:last-child {
       margin-bottom: 12px; }
 
+.checklist label {
+  display: block;
+  padding: 8px 0;
+  margin: 4px 0; }
+  .checklist label i.material-icons {
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    color: #dedede;
+    float: left;
+    margin-right: 8px; }
+  .checklist label input[type="checkbox"] {
+    display: none; }
+    .checklist label input[type="checkbox"]:checked ~ i.material-icons {
+      color: #4ef037; }
+
 #user-profile {
   display: none; }
   #user-profile:checked ~ .side-menu {

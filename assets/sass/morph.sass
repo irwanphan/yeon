@@ -8,10 +8,13 @@ $grey: #888
 $grey-dark: #2e2e2e
 
 $yellow: #fdffab
-$blue: #a8e6cf
+$tosca: #a8e6cf
 $pink: #ffd3b6
 
-$theme: $blue
+$green: #4ef037
+
+$theme: $tosca
+$ok: $green
 
 // font
 $font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif
@@ -247,6 +250,22 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		line-height: 28px
 		&:last-child
 			margin-bottom: 12px
+.checklist
+	label
+		display: block
+		padding: 8px 0
+		margin: 4px 0
+		i.material-icons
+			+transitions(.3s)
+			color: $grey-light
+			float: left
+			margin-right: 8px
+		input[type="checkbox"]
+			display: none
+			&:checked
+				~
+					i.material-icons
+						color: $ok
 // main
 // header
 #user-profile
