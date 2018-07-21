@@ -112,7 +112,8 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   -webkit-border-radius: 20px;
   text-align: center;
   display: inline-block;
-  margin-bottom: 4px; }
+  margin-bottom: 4px;
+  cursor: pointer; }
   .button.theme {
     color: #2e2e2e;
     background-color: #a8e6cf; }
@@ -217,6 +218,7 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
       margin-bottom: 12px; }
 
 .checklist label {
+  cursor: pointer;
   display: block;
   padding: 8px 0;
   margin: 4px 0; }

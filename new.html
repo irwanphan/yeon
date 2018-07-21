@@ -43,7 +43,15 @@
     ================================================== -->
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function(){
+            // $("this").prepend( "<textarea></textarea>" );
+        });
 
+        function newTextarea(this) {
+            $("<textarea></textarea>").insertBefore(this);
+        }
+    </script>
 </head>
 
 <body>
@@ -95,30 +103,16 @@
                 <input type="text" name="">
             </label>
             <label>
-                Isi surat
-                <textarea></textarea>
-            </label>
-            <label>
-                Pemeriksa
-                <small>Tahan Ctrl atau Shift untuk memilih lebih dari satu</small>
-                <select multiple class="multiple">
-                    <option disabled="disabled" selected>--- Pilih pemeriksa ---</option>
-                    <option>Walikota</option>
-                    <option>Kepala Seksi 1</option>
-                    <option>Kepala Seksi 2</option>
-                    <option>Kepala Seksi 3</option>
-                    <option>Kepala Seksi 4</option>
-                    <option>Kepala Seksi 5</option>
-                </select>
-            </label>
-            <label>
                 Ditandatangani oleh
                 <input type="text" name="">
             </label>
-            <label>
-                Jabatan
-                <input type="text" name="">
-            </label>
+
+            <section>
+                <hr>
+                <small>menimbang</small>
+                <button class="button pink" onclick="newTextarea()">tambah poin</button>
+            </section>
+
             <label>
                 Catatan
                 <textarea></textarea>
