@@ -238,6 +238,17 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
 
 .input_fields_wrap {
   margin-left: 50px; }
+  .input_fields_wrap > div {
+    position: relative; }
+    .input_fields_wrap > div p {
+      position: absolute;
+      left: -40px;
+      top: -16px;
+      color: #a8e6cf; }
+    .input_fields_wrap > div a.remove_field {
+      position: absolute;
+      left: -40px;
+      top: 40px; }
 
 #user-profile {
   display: none; }

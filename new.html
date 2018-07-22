@@ -53,8 +53,8 @@
                 e.preventDefault();
                 var x = $(this).siblings(".input_fields_wrap").children("div").length;
                 if(x < max_fields){ //max input box allowed
-                    $(this).siblings(".input_fields_wrap").append('<div><p></p><textarea class="removable"></textarea><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
-                    $( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
+                    $(this).siblings(".input_fields_wrap").append('<div><p class="material-icons">description</p><textarea class="removable"></textarea><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
+                    //$( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
                 }
             });
 
