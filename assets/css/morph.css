@@ -236,6 +236,9 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     .checklist label input[type="checkbox"]:checked ~ i.material-icons {
       color: #4ef037; }
 
+.input_fields_wrap {
+  margin-left: 50px; }
+
 #user-profile {
   display: none; }
   #user-profile:checked ~ .side-menu {

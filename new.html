@@ -44,13 +44,24 @@
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        $("document").ready(function(){
-            // $("this").prepend( "<textarea></textarea>" );
-        });
+        $(document).ready(function() {
+            var max_fields      = 10; //maximum input boxes allowed
+            var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+            var add_button      = $(".add_field_button"); //Add button ID
 
-        function newTextarea(this) {
-            $("<textarea></textarea>").insertBefore(this);
-        }
+            $(add_button).click(function(e){ //on add input button click
+                e.preventDefault();
+                var x = $(this).siblings(".input_fields_wrap").children("div").length;
+                if(x < max_fields){ //max input box allowed
+                    $(this).siblings(".input_fields_wrap").append('<div><p></p><textarea class="removable"></textarea><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
+                    $( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
+                }
+            });
+
+            $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+                e.preventDefault(); $(this).parent('div').remove(); x--;
+            })
+        });
     </script>
 </head>
 
@@ -110,7 +121,15 @@
             <section>
                 <hr>
                 <small>menimbang</small>
-                <button class="button pink" onclick="newTextarea()">tambah poin</button>
+                <div class="input_fields_wrap"></div>
+                <button class="add_field_button button pink">tambah poin</button>
+            </section>
+
+            <section>
+                <hr>
+                <small>mengingat</small>
+                <div class="input_fields_wrap"></div>
+                <button class="add_field_button button pink">tambah poin</button>
             </section>
 
             <label>
