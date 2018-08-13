@@ -213,6 +213,13 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		// vertical-align: top
 		text-transform: capitalize
 		line-height: 36px
+		span
+			font-weight: 500
+			display: inline-block
+			padding: 2px 16px
+			margin: 4px
+			border-bottom: 2px solid $theme
+			background-color: lighten($theme, 18%)
 	select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], textarea
 		border: 1px solid darken($grey-light, 10%)
 		padding: 6px 12px
@@ -292,18 +299,16 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 			+shadow()
 			background-color: $theme
 .input_fields_wrap
-	margin-left: 50px
+	margin-right: 40px
 	> div
 		position: relative
-		p
-			position: absolute
-			left: -40px
-			top: -16px
-			color: $theme
 		a.remove_field
 			position: absolute
-			left: -40px
-			top: 40px
+			right: -32px
+			top: 4px
+i.between
+	padding: 4px
+	color: $grey-light
 // main
 // header
 #user-profile

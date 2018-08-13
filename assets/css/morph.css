@@ -176,6 +176,13 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     display: block;
     text-transform: capitalize;
     line-height: 36px; }
+    .form-default > label span {
+      font-weight: 500;
+      display: inline-block;
+      padding: 2px 16px;
+      margin: 4px;
+      border-bottom: 2px solid #a8e6cf;
+      background-color: #effaf6; }
   .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
     border: 1px solid #c5c5c5;
     padding: 6px 12px;
@@ -270,18 +277,17 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     background-color: #a8e6cf; }
 
 .input_fields_wrap {
-  margin-left: 50px; }
+  margin-right: 40px; }
   .input_fields_wrap > div {
     position: relative; }
-    .input_fields_wrap > div p {
-      position: absolute;
-      left: -40px;
-      top: -16px;
-      color: #a8e6cf; }
     .input_fields_wrap > div a.remove_field {
       position: absolute;
-      left: -40px;
-      top: 40px; }
+      right: -32px;
+      top: 4px; }
+
+i.between {
+  padding: 4px;
+  color: #dedede; }
 
 #user-profile {
   display: none; }
