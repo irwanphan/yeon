@@ -293,8 +293,8 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		padding: 16px
 		border: 1px solid $theme
 		border-bottom: 0
-		&:nth-last-child
-			border-bottom: 1px
+		&:last-child
+			border-bottom: 1px solid $theme
 		&:hover, &:active, &:focus
 			+shadow()
 			background-color: $theme

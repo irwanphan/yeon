@@ -69,7 +69,7 @@
   box-sizing: border-box; }
 
 html, body {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif;
   background-color: #fafafa;
   padding: 0;
@@ -266,8 +266,8 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   padding: 16px;
   border: 1px solid #a8e6cf;
   border-bottom: 0; }
-  .linklist a:nth-last-child {
-    border-bottom: 1px; }
+  .linklist a:last-child {
+    border-bottom: 1px solid #a8e6cf; }
   .linklist a:hover, .linklist a:active, .linklist a:focus {
     box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
     -o-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
