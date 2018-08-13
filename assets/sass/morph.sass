@@ -36,6 +36,10 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 	height: $size
 	line-height: $size
 	text-align: center
+=columns ($columns: 4, $gap: 16px)
+	@each $browser in $browsers
+		#{$browser}column-count: $columns
+		#{$browser}column-gap: $gap
 =clearfix
 	content: ""
 	display: block
@@ -183,7 +187,15 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 		color: $white
 .clear
 	+clearfix
-
+// columns
+.columns
+	display: flex
+	.column
+		display: block
+		flex-basis: 0
+		flex-grow: 1
+		flex-shrink: 1
+		+columns(2)
 // form styling
 .form-default
 	font-size: 16px
@@ -268,6 +280,17 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 				~
 					i.material-icons
 						color: $ok
+.linklist
+	a
+		display: block
+		padding: 16px
+		border: 1px solid $theme
+		border-bottom: 0
+		&:nth-last-child
+			border-bottom: 1px
+		&:hover, &:active, &:focus
+			+shadow()
+			background-color: $theme
 .input_fields_wrap
 	margin-left: 50px
 	> div

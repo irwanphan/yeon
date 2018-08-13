@@ -103,16 +103,47 @@
         <form class="form-default">
             <label>
                 Jenis Surat
-                <div class="linklist">
-                    <a href="newSuratUndangan">Surat undangan</a>
-                </div>
-                <div class="linklist">
-                    <a href="">Surat pengantar</a>
-                </div>
-                <div class="linklist">
-                    <a href="">Surat perintah</a>
-                </div>
+                <select>
+                    <option disabled="disabled" selected>--- Pilih format ---</option>
+                    <option>Surat dari Hokkaido</option>
+                    <option>Suratan takdir</option>
+                </select>
             </label>
+            <label>
+                Tanggal Surat
+                <input type="text" name="">
+            </label>
+            <label>
+                Ditandatangani oleh
+                <input type="text" name="">
+            </label>
+
+            <section>
+                <hr>
+                <small>menimbang</small>
+                <div class="input_fields_wrap"></div>
+                <button class="add_field_button button pink">tambah poin</button>
+            </section>
+
+            <section>
+                <hr>
+                <small>mengingat</small>
+                <div class="input_fields_wrap"></div>
+                <button class="add_field_button button pink">tambah poin</button>
+            </section>
+
+            <hr><br>
+            <span class="section-title">pemeriksa</span>
+            <section>
+                <div class="input_fields_wrap"></div>
+                <button class="add_staff_button button pink">tambah pemeriksa</button>
+            </section>
+            
+            <label>
+                Catatan
+                <textarea></textarea>
+            </label>
+            <button class="button theme form">Proses</button>
         </form>
     </div>
 </div>

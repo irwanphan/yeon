@@ -32,7 +32,8 @@
     <!-- Included CSS files 
     ================================================== -->
 
-    <link rel="stylesheet" type="text/css"  href="assets/css/morph.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/morph.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -43,6 +44,7 @@
     ================================================== -->
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             var max_fields      = 10; //maximum input boxes allowed
@@ -60,7 +62,24 @@
 
             $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
                 e.preventDefault(); $(this).parent('div').remove(); x--;
-            })
+            });
+
+            $('#tglSurat').datetimepicker({
+                format: 'Y-m-d',
+                timepicker: false
+            });
+            $('#tglUndangan').datetimepicker({
+                format: 'D, Y-m-d',
+                timepicker: false
+            });
+            $('#waktuDari').datetimepicker({
+                format: 'H.i',
+                datepicker: false
+            });
+            $('#waktuSampai').datetimepicker({
+                format: 'H.i',
+                datepicker: false
+            });
         });
     </script>
 </head>
@@ -89,7 +108,7 @@
 
 <header>
     <nav>
-        <a href="index.html" class="button theme">
+        <a href="new.html" class="button theme">
             <i class="material-icons">close</i>
             <span>Batal</span>
         </a>
@@ -101,18 +120,68 @@
         <span class="section-title">Dokumen Baru</span>
 
         <form class="form-default">
+            <hr>
+            <small>kepala surat</small>
             <label>
-                Jenis Surat
-                <div class="linklist">
-                    <a href="newSuratUndangan">Surat undangan</a>
-                </div>
-                <div class="linklist">
-                    <a href="">Surat pengantar</a>
-                </div>
-                <div class="linklist">
-                    <a href="">Surat perintah</a>
+                Tanggal Surat
+                <input type="text" name="" id="tglSurat">
+            </label>
+            <label>
+                Nomor Surat
+                <input type="text" name="">
+            </label>
+            <label>
+                Sifat Surat
+                <input type="text" name="">
+            </label>
+            <label>
+                Lampiran
+                <input type="text" name="">
+            </label>
+            <label>
+                Hal
+                <input type="text" name="">
+            </label>
+            <label>
+                Ditujukan kepada
+                <input type="text" name="">
+            </label>
+            <label>
+                Ditandatangani oleh
+                <select>
+                    <option disabled="disabled" selected>--- Pilih ---</option>
+                    <option>John Doe</option>
+                    <option>Anne Doe</option>
+                </select>
+            </label>
+
+            <hr>
+            <small>isi surat undangan</small>
+            <label>
+                Isi surat
+                <textarea>      Sehubungan dengan akan diadakannya kerjasama antara Pemerintah Kota Pontianak dengan Badan Siber dan Sandi Negara (BSSN) untuk penerapan Tanda Tangan Digital di Kota Pontianak dengan ini kami mengundang Bapak/Ibu Saudara/i untuk menghadiri rapat sebagai berikut:</textarea>
+            </label>
+            <label>
+                Hari / Tanggal
+                <input type="text" name="" id="tglUndangan">
+            </label>
+            <label>
+                Waktu
+                <div class="columns">
+                    <input type="text" name="" class="column" placeholder="Dari" id="waktuDari">
+                    <input type="text" name="" class="column" placeholder="Sampai" id="waktuSampai">
                 </div>
             </label>
+            <label>
+                Tempat
+                <input type="text" name="" placeholder="eg. Hall Wali Kota">
+            </label>
+
+            <label>
+                Catatan
+                <textarea></textarea>
+            </label>
+            <button class="button theme form">Proses</button>
         </form>
     </div>
 </div>
