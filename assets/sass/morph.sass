@@ -310,8 +310,8 @@ i
 		padding: 16px
 		border: 1px solid $theme
 		border-bottom: 0
-		&:nth-last-child
-			border-bottom: 1px
+		&:last-child
+			border-bottom: 1px solid $theme
 		&:hover, &:active, &:focus
 			+shadow()
 			background-color: $theme
@@ -469,7 +469,7 @@ table
 			float: left
 			font-size: 16px
 			margin-right: 8px
-#table-document, #table-templates
+#table-document, #table-templates, #table-users
 	&_wrapper
 		padding-top: 16px
 		font-size: 16px

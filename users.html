@@ -52,7 +52,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#table-users').DataTable( {
-                responsive: true,
+                responsive: false,
                 iDisplayLength: 20,
                 bLengthChange: false
             } );
@@ -85,6 +85,10 @@
 
 <header>
     <nav>
+        <a href="index.html" class="button theme">
+            <i>home</i>
+            <span>Beranda</span>
+        </a>
         <a href="new.html" class="button theme">
             <i>add</i>
             <span>User baru</span>
@@ -99,35 +103,19 @@
         <table id="table-users" class="display">
             <thead>
                 <tr>
-                    <th><p>#</p></th>
-                    <th><p>Nama</p></th>
-                    <th><p>Jabatan</p></th>
-                    <th><p>Golongan</p></th>
-                    <th><p>Email</p></th>
-                    <th><p>Nomor kontak</p></th>
+                    <th>#</th>
+                    <th>Nama</th>
+                    <th>Jabatan</th>
+                    <th>Golongan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <p>1</p>
-                    </td>
-                    <td>
-                        <p>John Doe</p>
-                    </td>
-                    <td>
-                        <p>Walikota</p>
-                    </td>
-                    <td>
-                        <p>X</p>
-                    </td>
-                    <td>
-                        <p>john@doe.com</p>
-                    </td>
-                    <td>
-                        <p>08123456789</p>
-                    </td>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Walikota</td>
+                    <td>X</td>
                     <td>
                         <a href="viewUser.html" class="button theme">
                             <i>edit</i>
@@ -136,24 +124,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <p>2</p>
-                    </td>
-                    <td>
-                        <p>Anna Doe</p>
-                    </td>
-                    <td>
-                        <p>Kepala seksi</p>
-                    </td>
-                    <td>
-                        <p>X</p>
-                    </td>
-                    <td>
-                        <p>anna@doe.com</p>
-                    </td>
-                    <td>
-                        <p>08123456789</p>
-                    </td>
+                    <td>2</td>
+                    <td>Anna Doe</td>
+                    <td>Kepala seksi</td>
+                    <td>X</td>
                     <td>
                         <a href="viewUser.html" class="button theme">
                             <i>edit</i>
@@ -162,24 +136,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <p>3</p>
-                    </td>
-                    <td>
-                        <p>Budi Doe</p>
-                    </td>
-                    <td>
-                        <p>Kepala sub sseksi</p>
-                    </td>
-                    <td>
-                        <p>X</p>
-                    </td>
-                    <td>
-                        <p>budi@doe.com</p>
-                    </td>
-                    <td>
-                        <p>08123456789</p>
-                    </td>
+                    <td>3</td>
+                    <td>Budi Doe</td>
+                    <td>Kepala sub seksi</td>
+                    <td>X</td>
                     <td>
                         <a href="viewUser.html" class="button theme">
                             <i>edit</i>
@@ -187,7 +147,6 @@
                         </a>
                     </td>
                 </tr>
-                
             </tbody>
         </table>
     </div>
