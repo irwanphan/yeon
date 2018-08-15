@@ -55,7 +55,7 @@
                 e.preventDefault();
                 var x = $(this).siblings('.input_fields_wrap').children('div').length;
                 if(x < max_fields){ //max input box allowed
-                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><i class="remove_field">close</i></div>'); //add textarea
+                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
                     //$( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
                 }
             });
@@ -108,8 +108,8 @@
 
 <header>
     <nav>
-        <a href="viewSuratUndangan.html" class="button theme">
-            <i>close</i>
+        <a href="new.html" class="button theme">
+            <i class="material-icons">close</i>
             <span>Batal</span>
         </a>
     </nav>
@@ -120,79 +120,73 @@
         <span class="section-title">Surat Undangan</span>
 
         <form class="form-default">
-            <hr>
-            <small>kepala surat</small>
             <label>
-                Tanggal Surat
-                <input type="text" name="" id="tglSurat" value="15 Aug 2018">
+                Nama
+                <input type="text" name="">
             </label>
             <label>
-                Nomor Surat
-                <input type="text" name="" value="123/1/DKI-IKP/I/2018">
+                Jabatan
+                <input type="text" name="">
             </label>
             <label>
-                Sifat Surat
-                <input type="text" name="" value="penting dan mendesak">
+                Golongan
+                <input type="text" name="">
             </label>
             <label>
-                Lampiran
-                <input type="text" name="" value="200 lembar">
+                Email
+                <input type="email" name="">
             </label>
             <label>
-                Hal
-                <input type="text" name="" value="Penanganan pra bencana">
-            </label>
-            <label>
-                Ditandatangani oleh
-                <select>
-                    <option selected>John Doe</option>
-                    <option>Anne Doe</option>
-                </select>
+                Nomor kontak
+                <input type="text" name="">
             </label>
 
-            <hr>
-            <small>Penerima surat</small>
-            <label>
-                Ditujukan kepada
-                <input type="text" name="" value="-">
-            </label>
-            <label>
-                Daftar penerima surat (jika banyak)
-                <div class="input_fields_wrap">
-                    <div><input type="text" class="removable" value="Anne Doe"><i class="remove_field">close</i></div>
-                    <div><input type="text" class="removable" value="Budi Doe"><i class="remove_field">close</i></div>
-                    <div><input type="text" class="removable" value="Cecil Doe"><i class="remove_field">close</i></div>
-                </div>
-                <button class="add_field_button button pink">tambah penerima</button>
-            </label>
+            <div class="checklist">
 
-            <hr>
-            <small>isi surat undangan</small>
-            <label>
-                Isi surat
-                <textarea>      Sehubungan dengan akan diadakannya kerjasama antara Pemerintah Kota Pontianak dengan Badan Siber dan Sandi Negara (BSSN) untuk penerapan Tanda Tangan Digital di Kota Pontianak dengan ini kami mengundang Bapak/Ibu Saudara/i untuk menghadiri rapat sebagai berikut:</textarea>
-            </label>
-            <label>
-                Hari / Tanggal
-                <input type="text" name="" id="tglUndangan" value="Fri, 17 Aug 2018">
-            </label>
-            <label>
-                Waktu
-                <div class="columns">
-                    <input type="text" name="" class="column" placeholder="Dari" id="waktuDari" value="09.00">
-                    <i class="material-icons between">access_time</i>
-                    <input type="text" name="" class="column" placeholder="Sampai" id="waktuSampai" value="17.00">
-                </div>
-            </label>
-            <label>
-                Tempat
-                <input type="text" name="" placeholder="eg. Hall Wali Kota" value="Hall Wali Kota">
-            </label>
+                <hr>
+                <small>Hak akses umum</small>
 
-            <label>
-                Catatan
-                <textarea>Sekedar catatan kaki</textarea>
-            </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Menambah / mengubah user
+                </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Melihat semua surat
+                </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Menambah / mengubah surat
+                </label>
+
+                <hr>
+                <small>Jenis surat yang dapat diakses</small>
+
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Surat undangan
+                </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Surat pengantar
+                </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Surat perintah
+                </label>
+                <label>
+                    <input type="checkbox" name="">
+                    <i class="material-icons">check_circle</i>
+                    Suratan takdir
+                </label>
+
+            </div>
             <button class="button theme form">Proses</button>
         </form>
     </div>

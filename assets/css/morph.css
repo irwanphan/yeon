@@ -104,6 +104,20 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   input[type="radio"] ~ label, input[type="submit"] ~ label, input[type="checkbox"] ~ label, a ~ label {
     cursor: pointer; }
 
+i {
+  text-align: center;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale; }
+
 .button {
   border-radius: 20px;
   -o-border-radius: 20px;
@@ -247,7 +261,7 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   display: block;
   padding: 8px 0;
   margin: 4px 0; }
-  .checklist label i.material-icons {
+  .checklist label i {
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -258,7 +272,7 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
     margin-right: 8px; }
   .checklist label input[type="checkbox"] {
     display: none; }
-    .checklist label input[type="checkbox"]:checked ~ i.material-icons {
+    .checklist label input[type="checkbox"]:checked ~ i {
       color: #4ef037; }
 
 .linklist a {
@@ -280,8 +294,10 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a {
   margin-right: 40px; }
   .input_fields_wrap > div {
     position: relative; }
-    .input_fields_wrap > div a.remove_field {
+    .input_fields_wrap > div i.remove_field {
+      cursor: pointer;
       position: absolute;
+      padding: 4px;
       right: -32px;
       top: 4px; }
 
@@ -390,7 +406,7 @@ header {
   -webkit-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168); }
   header nav {
     padding: 4px 16px; }
-    header nav .button i.material-icons, header nav .button span {
+    header nav .button i, header nav .button span {
       width: auto;
       height: 40px;
       line-height: 40px;
@@ -404,7 +420,7 @@ header {
   header {
     top: 0;
     height: 50px; }
-    header nav .button i.material-icons, header nav .button span {
+    header nav .button i, header nav .button span {
       display: inline-block; } }
 .main {
   position: fixed;
@@ -437,7 +453,7 @@ table {
     vertical-align: middle; }
   table .button.theme {
     padding: 4px 16px; }
-    table .button.theme i.material-icons {
+    table .button.theme i {
       float: left;
       font-size: 16px;
       margin-right: 8px; }
