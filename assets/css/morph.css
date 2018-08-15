@@ -516,12 +516,14 @@ table {
     max-width: 640px;
     margin: 100px auto 0;
     padding-top: 48px;
-    background-color: #fff;
+    background-color: #fff; }
+@media(min-width: 641px) {
+  .login .container {
     border-radius: 30px;
     -o-border-radius: 30px;
     -ms-border-radius: 30px;
     -moz-border-radius: 30px;
-    -webkit-border-radius: 30px; }
+    -webkit-border-radius: 30px; } }
     .login .container .iconic {
       color: #888;
       font-size: 64px;
