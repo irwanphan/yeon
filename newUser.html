@@ -46,41 +46,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            var max_fields      = 10; //maximum input boxes allowed
-            var wrapper         = $('.input_fields_wrap'); //Fields wrapper
-            var add_button      = $('.add_field_button'); //Add button ID
-
-            $(add_button).click(function(e){ //on add input button click
-                e.preventDefault();
-                var x = $(this).siblings('.input_fields_wrap').children('div').length;
-                if(x < max_fields){ //max input box allowed
-                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
-                    //$( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
-                }
-            });
-
-            $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-                e.preventDefault(); $(this).parent('div').remove(); x--;
-            });
-
-            $('#tglSurat').datetimepicker({
-                format: 'd M Y',
-                timepicker: false
-            });
-            $('#tglUndangan').datetimepicker({
-                format: 'D, d M Y',
-                timepicker: false
-            });
-            $('#waktuDari').datetimepicker({
-                format: 'H.i',
-                datepicker: false
-            });
-            $('#waktuSampai').datetimepicker({
-                format: 'H.i',
-                datepicker: false
-            });
-        });
+        
     </script>
 </head>
 
@@ -109,7 +75,7 @@
 <header>
     <nav>
         <a href="new.html" class="button theme">
-            <i class="material-icons">close</i>
+            <i>close</i>
             <span>Batal</span>
         </a>
     </nav>
@@ -148,17 +114,17 @@
 
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Menambah / mengubah user
                 </label>
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Melihat semua surat
                 </label>
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Menambah / mengubah surat
                 </label>
 
@@ -167,22 +133,22 @@
 
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Surat undangan
                 </label>
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Surat pengantar
                 </label>
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Surat perintah
                 </label>
                 <label>
                     <input type="checkbox" name="">
-                    <i class="material-icons">check_circle</i>
+                    <i>check_circle</i>
                     Suratan takdir
                 </label>
 
