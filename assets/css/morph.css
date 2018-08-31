@@ -197,6 +197,9 @@ i {
       margin: 4px;
       border-bottom: 2px solid #a8e6cf;
       background-color: #effaf6; }
+      .form-default > label span.imp {
+        border-bottom: 2px solid #ffd3b6;
+        background-color: #ffecdf; }
   .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
     border: 1px solid #c5c5c5;
     padding: 6px 12px;
