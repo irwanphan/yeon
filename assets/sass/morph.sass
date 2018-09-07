@@ -109,6 +109,13 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 		left: 80px
 	100%
 		left: 100px
++keyframes(updown)
+	0%
+		bottom: 20px
+	80%
+		bottom: 80px
+	100%
+		bottom: 20px
 
 // container
 .full-width
@@ -618,3 +625,26 @@ table
 		span
 			margin-top: 80px
 			display: inline-block
+	.ninja
+		+transitions(.3s)
+		+borderradius()
+		background-color: $yellow
+		color: $grey-dark
+		padding: 0
+		line-height: 128px
+		height: 128px
+		width: 128px
+		position: absolute
+		bottom: 20px
+		-webkit-animation: updown 3.5s linear infinite
+		-moz-animation: updown 3.5s linear infinite
+		-o-animation: updown 3.5s linear infinite
+		&:hover, &:focus, &:active
+			color: $black
+			background-color: darken($yellow, 5%)
+		i
+			font-size: 160px
+			&:after
+				position: absolute
+				content: "face"
+				margin: -16px 0 0 -16px

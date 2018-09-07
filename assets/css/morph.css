@@ -26,6 +26,34 @@
     left: 80px; }
   100% {
     left: 100px; } }
+@-webkit-keyframes updown {
+  0% {
+    bottom: 20px; }
+  80% {
+    bottom: 80px; }
+  100% {
+    bottom: 20px; } }
+@-moz-keyframes updown {
+  0% {
+    bottom: 20px; }
+  80% {
+    bottom: 80px; }
+  100% {
+    bottom: 20px; } }
+@-ms-keyframes updown {
+  0% {
+    bottom: 20px; }
+  80% {
+    bottom: 80px; }
+  100% {
+    bottom: 20px; } }
+@keyframes updown {
+  0% {
+    bottom: 20px; }
+  80% {
+    bottom: 80px; }
+  100% {
+    bottom: 20px; } }
 .full-width {
   width: 100%; }
 
@@ -658,5 +686,36 @@ table {
   .go-back .text span {
     margin-top: 80px;
     display: inline-block; }
+.go-back .ninja {
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #fdffab;
+  color: #2e2e2e;
+  padding: 0;
+  line-height: 128px;
+  height: 128px;
+  width: 128px;
+  position: absolute;
+  bottom: 20px;
+  -webkit-animation: updown 3.5s linear infinite;
+  -moz-animation: updown 3.5s linear infinite;
+  -o-animation: updown 3.5s linear infinite; }
+  .go-back .ninja:hover, .go-back .ninja:focus, .go-back .ninja:active {
+    color: #000;
+    background-color: #fcff92; }
+  .go-back .ninja i {
+    font-size: 160px; }
+    .go-back .ninja i:after {
+      position: absolute;
+      content: "face";
+      margin: -16px 0 0 -16px; }
 
 /*# sourceMappingURL=morph.css.map */
