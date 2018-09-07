@@ -1,3 +1,31 @@
+@-webkit-keyframes moving {
+  0% {
+    left: 100px; }
+  50% {
+    left: 80px; }
+  100% {
+    left: 100px; } }
+@-moz-keyframes moving {
+  0% {
+    left: 100px; }
+  50% {
+    left: 80px; }
+  100% {
+    left: 100px; } }
+@-ms-keyframes moving {
+  0% {
+    left: 100px; }
+  50% {
+    left: 80px; }
+  100% {
+    left: 100px; } }
+@keyframes moving {
+  0% {
+    left: 100px; }
+  50% {
+    left: 80px; }
+  100% {
+    left: 100px; } }
 .full-width {
   width: 100%; }
 
@@ -425,6 +453,18 @@ header {
     height: 50px; }
     header nav .button i, header nav .button span {
       display: inline-block; } }
+footer.notice {
+  background-color: #a8e6cf;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px; }
+  footer.notice h1 {
+    margin: 0;
+    height: 44px; }
+
 .main {
   position: fixed;
   top: 68px;
@@ -554,5 +594,69 @@ table {
     margin-top: 24px;
     font-size: 13px;
     content: "Powered by YeonTheme"; }
+
+.go-back .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #fdffab;
+  color: #2e2e2e;
+  padding: 0;
+  line-height: 128px;
+  height: 128px;
+  width: 128px; }
+  .go-back .face:hover, .go-back .face:focus, .go-back .face:active {
+    color: #000;
+    background-color: #fcff92; }
+  .go-back .face i {
+    font-size: 160px; }
+    .go-back .face i:after {
+      position: absolute;
+      content: "face";
+      margin: -16px 0 0 -16px; }
+.go-back .palm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #ff893c;
+  z-index: 2;
+  font-size: 64px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  -webkit-animation: moving 14s linear infinite;
+  -moz-animation: moving 14s linear infinite;
+  -o-animation: moving 14s linear infinite; }
+  .go-back .palm i {
+    font-size: 64px; }
+    .go-back .palm i:after {
+      position: absolute;
+      content: "pan_tool";
+      margin: 48px 0 0 -16px; }
+.go-back .text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  .go-back .text span {
+    margin-top: 80px;
+    display: inline-block; }
 
 /*# sourceMappingURL=morph.css.map */

@@ -91,6 +91,24 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 	direction: ltr
 	-moz-font-feature-settings: 'liga'
 	-moz-osx-font-smoothing: grayscale
+// keyframes mixin
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+// use of keyframes mixin
++keyframes(moving)
+	0%
+		left: 100px
+	50%
+		left: 80px
+	100%
+		left: 100px
 
 // container
 .full-width
@@ -433,7 +451,18 @@ header
 		nav	.button
 			i, span
 				display: inline-block
-
+footer
+	&.notice
+		background-color: $theme
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 32px
+		h1
+			margin: 0
+			height: 44px
 // main body
 .main
 	// padding-top: 50px
@@ -541,3 +570,51 @@ table
 		margin-top: 24px
 		font-size: 13px
 		content: "Powered by YeonTheme"
+
+// forbidden
+.go-back
+	.face
+		+absolutecenter
+		+transitions(.3s)
+		+borderradius()
+		background-color: $yellow
+		color: $grey-dark
+		padding: 0
+		line-height: 128px
+		height: 128px
+		width: 128px
+		&:hover, &:focus, &:active
+			color: $black
+			background-color: darken($yellow, 5%)
+		i
+			font-size: 160px
+			&:after
+				position: absolute
+				content: "face"
+				margin: -16px 0 0 -16px
+	.palm
+		+absolutecenter
+		color: darken($pink, 24%)
+		z-index: 2
+		font-size: 64px
+		width: 64px
+		height: 64px
+		line-height: 64px
+		-webkit-animation: moving 14s linear infinite
+		-moz-animation: moving 14s linear infinite
+		-o-animation: moving 14s linear infinite
+		i
+			font-size: 64px
+			&:after
+				position: absolute
+				content: "pan_tool"
+				margin: 48px 0 0 -16px
+	.text
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		text-align: center
+		span
+			margin-top: 80px
+			display: inline-block
