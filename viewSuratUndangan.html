@@ -78,7 +78,7 @@
             <i>edit</i>
             <span>Ubah</span>
         </a>
-        <a class="button theme popup-toggle">
+        <a class="button theme popup-toggle" id="tandatangan">
             <i>gesture</i>
             <span>Tanda tangan</span>
         </a>
@@ -89,7 +89,7 @@
     </nav>
 </header>
 
-<div class="popup hidden" id="justtest">
+<div class="popup hidden" id="tandatangan-modal">
     <div class="modal">
         <!-- content here -->
         <span class="section-title">
@@ -98,7 +98,30 @@
         <div class="form-default">
             <label>
                 Masukkan kode
-                <input type="text" name="" placeholder="kode">
+                <input type="text" name="" placeholder="kode parafrase*">
+                <button class="button theme form">kirim</button>
+            </label>
+        </div>
+    </div>
+    <div class="modal-close popup-toggle"><i>close</i></div>
+</div>
+
+<div class="popup hidden" id="tindakan-modal">
+    <div class="modal">
+        <span class="section-title">
+            tindakan
+        </span>
+        <div class="form-default">
+            <label>
+                Hasil pemeriksaan
+                <select>
+                    <option selected>Disetujui</option>
+                    <option>Ditolak</option>
+                </select>
+            </label>
+            <label>
+                Catatan
+                <textarea placeholder="Catatan"></textarea>
                 <button class="button theme form">kirim</button>
             </label>
         </div>
@@ -175,6 +198,13 @@
                 <span>Hall Wali Kota</span>
             </label>
 
+            <label>
+                <a class="button theme form popup-toggle" id="tindakan">
+                    <i>edit</i>
+                    Tindakan
+                </a>
+            </label>
+
             <hr>
             <label>
                 Catatan
@@ -203,12 +233,21 @@
 
 <script type="text/javascript">
     $(document).on('click', '.popup-toggle', function() {
-        togglePopup();
+        // get id from clicker
+        togglePopup( this.id );
     });
-    function togglePopup()
+    function togglePopup( id )
     {
         // $('.popup').toggleClass( 'hidden popup-toggle' );
-        $('.popup').toggleClass( 'hidden' );
+        // paste the id to enable modal view
+        $('#'+id+'-modal.popup').removeClass( 'hidden' );
+        if ( id=="" ) {
+            // if the .popup does not has .hidden class
+            if (!($('.popup').hasClass( '.hidden' ) )) {
+                // give em hidden class
+                $('.popup').addClass( 'hidden' );
+            }
+        }
     }
 </script>
 
