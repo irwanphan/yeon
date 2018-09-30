@@ -722,3 +722,79 @@ table
 		color: $grey-dark
 		font-size: 16px
 		font-weight: 500
+
+// upload file selector
+.file-upload
+	display: block
+	text-align: center
+	font-family: $font-family
+	font-size: 12px
+	.file-select
+		display: block
+		border: 2px solid $grey-light
+		color: $grey-dark
+		cursor: pointer
+		height: 50px
+		line-height: 50px
+		text-align: left
+		background: $white
+		overflow: hidden
+		position: relative
+		+transitions(.3s)
+		.file-select-button
+			+transitions(.3s)
+			background: $grey-light
+			padding: 0 10px
+			display: inline-block
+			height: 50px
+			line-height: 50px
+		.file-select-name
+			line-height: 50px
+			display: inline-block
+			padding: 0 10px
+		&:hover
+			border-color: darken($theme, 8%)
+			.file-select-button
+				background: darken($theme, 8%)
+				color: $white
+	&.active .file-select
+		border-color: $theme
+		.file-select-button
+			background: $theme
+			color: $white
+	.file-select input[type=file]
+		z-index: 100
+		cursor: pointer
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		filter: alpha(opacity=0)
+	.file-select.file-select-disabled
+		opacity: 0.65
+		&:hover
+			cursor: default
+			display: block
+			border: 2px solid $grey-light
+			color: $grey
+			cursor: pointer
+			height: 40px
+			line-height: 40px
+			margin-top: 5px
+			text-align: left
+			background: $white
+			overflow: hidden
+			position: relative
+			.file-select-button
+				background: $grey-light
+				color: $grey
+				padding: 0 10px
+				display: inline-block
+				height: 40px
+				line-height: 40px
+			.file-select-name
+				line-height: 40px
+				display: inline-block
+				padding: 0 10px

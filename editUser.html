@@ -178,11 +178,46 @@
                 </label>
 
             </div>
-            <button class="button theme form">Proses</button>
+
+            <div>
+
+                <hr>
+                <small>Upload tanda tangan (file PNG)</small>
+
+                <div class="file-upload">
+                    <div class="file-select">
+                        <div class="file-select-button" id="fileName">Nama file</div>
+                        <div class="file-select-name" id="noFile">Belum ada file...</div> 
+                        <input type="file" name="import_file" id="chooseFile">
+                    </div>
+                </div>
+                <br>
+                <button class="button theme form">Upload</button>
+            </div>
+
+            <br>
+            <hr>
+            <button class="button theme form">Simpan Data</button>
+
         </form>
     </div>
 </div>
 
 </body>
+
+<script type="text/javascript">
+    // override input [file]
+    $('#chooseFile').bind('change', function () {
+        var filename = $("#chooseFile").val();
+        if (/^\s*$/.test(filename)) {
+            $(".file-upload").removeClass('active');
+            $("#noFile").text("No file chosen..."); 
+        }
+        else {
+            $(".file-upload").addClass('active');
+            $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+        }
+    });
+</script>
 
 </html>
