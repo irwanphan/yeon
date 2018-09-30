@@ -663,21 +663,62 @@ table
 				margin: -16px 0 0 -16px
 
 // pop up stuff and modals
+.popup-toggle
+	cursor: pointer
 .popup
-	display: block
+	+transitions(.3s)
 	position: fixed
-	width: 100%
-	height: 100%
-	left: 0
 	top: 0
-	background-color: rgba(188,188,255,0.38)
+	left: 0
+	right: 0
+	bottom: 0
 	z-index: 188
+	&.hidden
+		.modal
+			top: 1600px
+			opacity: 0
 	.modal
-		+borderradius(16px)
-		+absolutecenter
-		margin: 60px auto
+		opacity: 1
+		top: 0
+		+transitions(.3s)
+		width: 100%
+		position: absolute
+		left: 0
+		right: 0
 		background-color: $white
-		width: 960px
-		display: block
 		padding: 16px
-		content: ""
+		z-index: 190
+		@media(max-width: 960px)
+			top: 0
+			bottom: 0
+			border-bottom: 8px solid $theme
+	.modal-close
+		position: fixed
+		right: 16px
+		top: 16px
+		z-index: 191
+	@media(min-width: 961px)
+		.modal
+			width: 960px
+			margin: 60px auto
+			+borderradius(16px)
+		.modal-close
+			right: 32px
+			top: 32px
+			z-index: 189
+			&:before
+				position: fixed
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background-color: rgba(188,188,255,0.38)
+				display: block
+				content: ""
+			i
+				font-size: 24px
+	.section-title
+		text-transform: uppercase
+		color: $grey-dark
+		font-size: 16px
+		font-weight: 500

@@ -78,7 +78,7 @@
             <i>edit</i>
             <span>Ubah</span>
         </a>
-        <a class="button theme" id="">
+        <a class="button theme popup-toggle">
             <i>gesture</i>
             <span>Tanda tangan</span>
         </a>
@@ -89,11 +89,21 @@
     </nav>
 </header>
 
-<div class="popup">
+<div class="popup hidden" id="justtest">
     <div class="modal">
         <!-- content here -->
-        asdasd
+        <span class="section-title">
+            tanda tangan
+        </span>
+        <div class="form-default">
+            <label>
+                Masukkan kode
+                <input type="text" name="" placeholder="kode">
+                <button class="button theme form">kirim</button>
+            </label>
+        </div>
     </div>
+    <div class="modal-close popup-toggle"><i>close</i></div>
 </div>
 
 <div class="main">
@@ -190,5 +200,16 @@
 </div>
 
 </body>
+
+<script type="text/javascript">
+    $(document).on('click', '.popup-toggle', function() {
+        togglePopup();
+    });
+    function togglePopup()
+    {
+        // $('.popup').toggleClass( 'hidden popup-toggle' );
+        $('.popup').toggleClass( 'hidden' );
+    }
+</script>
 
 </html>
