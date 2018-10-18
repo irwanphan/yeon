@@ -549,7 +549,7 @@ table
 		position: relative
 		width: 100%
 		max-width: 640px
-		margin: 100px auto 0
+		margin: 160px auto 0
 		padding-top: 48px
 		background-color: $white
 		@media(min-width: 641px)
@@ -566,6 +566,9 @@ table
 			text-align: center
 			left: 50%
 			margin-left: -50px
+			max-width: 106px
+			max-height: 106px
+			overflow: hidden
 	.button
 		display: block
 		padding: 8px 16px
@@ -577,7 +580,17 @@ table
 		margin-top: 24px
 		font-size: 13px
 		content: "Powered by YeonTheme"
-
+	.app-title-area
+		color: $grey-dark
+		text-align: center
+		display: block
+		.app-title
+			font-size: 28px
+			font-weight: 600
+			display: block
+		.app-title-sub
+			font-size: 12px
+			display: block
 // forbidden
 .go-back
 	.face

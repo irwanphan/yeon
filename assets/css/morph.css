@@ -125,7 +125,7 @@
   box-sizing: border-box; }
 
 html, body {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif;
   background-color: #fafafa;
   padding: 0;
@@ -585,7 +585,7 @@ table {
     position: relative;
     width: 100%;
     max-width: 640px;
-    margin: 100px auto 0;
+    margin: 160px auto 0;
     padding-top: 48px;
     background-color: #fff; }
 @media(min-width: 641px) {
@@ -610,7 +610,10 @@ table {
       top: -64px;
       text-align: center;
       left: 50%;
-      margin-left: -50px; }
+      margin-left: -50px;
+      max-width: 106px;
+      max-height: 106px;
+      overflow: hidden; }
   .login .button {
     display: block;
     padding: 8px 16px;
@@ -622,6 +625,17 @@ table {
     margin-top: 24px;
     font-size: 13px;
     content: "Powered by YeonTheme"; }
+  .login .app-title-area {
+    color: #2e2e2e;
+    text-align: center;
+    display: block; }
+    .login .app-title-area .app-title {
+      font-size: 28px;
+      font-weight: 600;
+      display: block; }
+    .login .app-title-area .app-title-sub {
+      font-size: 12px;
+      display: block; }
 
 .go-back .face {
   position: absolute;
