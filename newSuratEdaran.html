@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>yeon</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== --> 
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"> -->
+    <!-- <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+
+    <!-- Included CSS files 
+    ================================================== -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/morph.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,‌​100italic,300,300ita‌​lic,400italic,500,50‌​0italic,700,700itali‌​c,900italic,900' rel='stylesheet' type='text/css'>
+
+    <!-- Included javascript files 
+    ================================================== -->
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var max_fields      = 10; //maximum input boxes allowed
+            var wrapper         = $('.input_fields_wrap'); //Fields wrapper
+            var add_button      = $('.add_field_button'); //Add button ID
+
+            $(add_button).click(function(e){ //on add input button click
+                e.preventDefault();
+                var x = $(this).siblings('.input_fields_wrap').children('div').length;
+                if(x < max_fields){ //max input box allowed
+                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
+                    //$( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
+                }
+            });
+
+            $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+                e.preventDefault(); $(this).parent('div').remove(); x--;
+            });
+
+            $('#tglSurat').datetimepicker({
+                format: 'd M Y',
+                timepicker: false
+            });
+            $('#tglUndangan').datetimepicker({
+                format: 'D, d M Y',
+                timepicker: false
+            });
+            $('#waktuDari').datetimepicker({
+                format: 'H.i',
+                datepicker: false
+            });
+            $('#waktuSampai').datetimepicker({
+                format: 'H.i',
+                datepicker: false
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+<input type="checkbox" name="user" id="user-profile">
+<label class="user-profile" for="user-profile">
+    <div class="user-profile-img">
+        <img src="">
+    </div>
+    <span class="user-profile-name">
+        John Doe of The Crimson Heaven
+    </span>
+</label>
+
+<label class="side-menu" for="user-profile">
+    <!-- <a href="templates.html">Templates</a> -->
+    <a href="users.html">Users</a>
+    <a href="roles.html">Roles</a>
+    <hr>
+    <a href="login.html">Log out</a>
+
+    <div class="base-layer"></div>
+</label>
+
+<header>
+    <nav>
+        <a href="new.html" class="button theme">
+            <i>close</i>
+            <span>Batal</span>
+        </a>
+    </nav>
+</header>
+
+<div class="main">
+    <div class="container">
+        <span class="section-title">Surat Undangan</span>
+
+        <form class="form-default">
+            <hr>
+            <small>kepala surat</small>
+            <label>
+                Tanggal Surat
+                <input type="text" name="" id="tglSurat">
+            </label>
+            <label>
+                Nomor Surat
+                <input type="text" name="">
+            </label>
+            <label>
+                Sifat Surat
+                <input type="text" name="">
+            </label>
+            <label>
+                Lampiran
+                <input type="text" name="">
+            </label>
+            <label>
+                Hal (Tentang)
+                <input type="text" name="">
+            </label>
+            <label>
+                Ditandatangani oleh
+                <select>
+                    <option disabled="disabled" selected>--- Pilih ---</option>
+                    <option>John Doe</option>
+                    <option>Anne Doe</option>
+                </select>
+            </label>
+
+            <hr>
+            <small>Penerima surat</small>
+            <label>
+                Ditujukan kepada
+                <input type="text" name="">
+            </label>
+            <label>
+                Daftar penerima surat (jika banyak)
+                <div class="input_fields_wrap"></div>
+                <button class="add_field_button button pink">tambah penerima</button>
+            </label>
+
+            <hr>
+            <small>isi surat undangan</small>
+            <label>
+                Isi surat
+                <textarea>      Sehubungan dengan akan diadakannya kerjasama antara Pemerintah Kota Pontianak dengan Badan Siber dan Sandi Negara (BSSN) untuk penerapan Tanda Tangan Digital di Kota Pontianak dengan ini kami mengundang Bapak/Ibu Saudara/i untuk menghadiri rapat sebagai berikut:</textarea>
+            </label>
+
+            <label>
+                Catatan
+                <textarea></textarea>
+            </label>
+            <button class="button theme form">Proses</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
