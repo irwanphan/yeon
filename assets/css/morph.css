@@ -353,12 +353,12 @@ i {
   margin-right: 40px; }
   .input_fields_wrap > div {
     position: relative; }
-    .input_fields_wrap > div i.remove_field {
+    .input_fields_wrap > div a.remove_field {
       cursor: pointer;
       position: absolute;
       padding: 4px;
       right: -32px;
-      top: 4px; }
+      top: -2px; }
 
 i.between {
   padding: 4px;
