@@ -608,8 +608,8 @@ table {
       background-color: #fff;
       border: 5px solid #a8e6cf;
       top: -64px;
-      text-align: center;
       left: 50%;
+      text-align: center;
       margin-left: -50px;
       max-width: 106px;
       max-height: 106px;
@@ -622,14 +622,10 @@ table {
     margin: 16px 0 32px; }
   .login footer {
     text-align: center;
-    color: #888;
-    letter-spacing: 4px;
-    margin-top: 24px;
-    font-size: 13px;
-    content: "Powered by YeonTheme"; }
-  .login .app-title-area {
     color: #2e2e2e;
-    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 24px; }
+  .login .app-title-area {
     display: block; }
     .login .app-title-area .app-title {
       font-size: 28px;
