@@ -55,7 +55,7 @@
                 e.preventDefault();
                 var x = $(this).siblings('.input_fields_wrap').children('div').length;
                 if(x < max_fields){ //max input box allowed
-                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><a href="#" class="remove_field material-icons">close</a></div>'); //add textarea
+                    $(this).siblings('.input_fields_wrap').append('<div><input type="text" class="removable"><i class="remove_field">close</i></div>'); //add textarea
                     //$( "p:last" ).html( x+1 ); //insert current number to the last div's p --> used as number 
                 }
             });
@@ -108,7 +108,7 @@
 
 <header>
     <nav>
-        <a href="new.html" class="button theme">
+        <a href="viewSuratEdaran.html" class="button theme">
             <i>close</i>
             <span>Batal</span>
         </a>
@@ -124,29 +124,28 @@
             <small>kepala surat</small>
             <label>
                 Tanggal Surat
-                <input type="text" name="" id="tglSurat">
+                <input type="text" name="" id="tglSurat" value="15 Aug 2018">
             </label>
             <label>
                 Nomor Surat
-                <input type="text" name="">
+                <input type="text" name="" value="123/1/DKI-IKP/I/2018">
             </label>
             <label>
                 Sifat Surat
-                <input type="text" name="">
+                <input type="text" name="" value="penting dan mendesak">
             </label>
             <label>
                 Lampiran
-                <input type="text" name="">
+                <input type="text" name="" value="200 lembar">
             </label>
             <label>
-                Hal (Tentang)
-                <input type="text" name="">
+                Hal
+                <input type="text" name="" value="Penanganan pra bencana">
             </label>
             <label>
                 Ditandatangani oleh
                 <select>
-                    <option disabled="disabled" selected>--- Pilih ---</option>
-                    <option>John Doe</option>
+                    <option selected>John Doe</option>
                     <option>Anne Doe</option>
                 </select>
             </label>
@@ -155,11 +154,15 @@
             <small>Penerima surat</small>
             <label>
                 Ditujukan kepada
-                <input type="text" name="">
+                <input type="text" name="" value="-">
             </label>
             <label>
                 Daftar penerima surat (jika banyak)
-                <div class="input_fields_wrap"></div>
+                <div class="input_fields_wrap">
+                    <div><input type="text" class="removable" value="Anne Doe"><i class="remove_field">close</i></div>
+                    <div><input type="text" class="removable" value="Budi Doe"><i class="remove_field">close</i></div>
+                    <div><input type="text" class="removable" value="Cecil Doe"><i class="remove_field">close</i></div>
+                </div>
                 <button class="add_field_button button pink">tambah penerima</button>
             </label>
 
@@ -171,13 +174,17 @@
             </label>
             <label>
                 Poin-poin surat edaran
-                <div class="input_fields_wrap"></div>
+                <div class="input_fields_wrap">
+                    <div><input type="text" class="removable" value="Mendaftarkan seluruh sistem atau aplikasi yang telah dibangun dan/atau sedang dibangun oleh masing-masing perangkat daerah kepada Dinas Komunikasi dan Informatika Kota Pontianak."><i class="remove_field">close</i></div>
+                    <div><input type="text" class="removable" value="Memberikan hak akses pada database yang ada pada masing-masing sistem atau aplikasi kepada Dinas Komunikasi dan Informatika Kota Pontianak dan/atau programmer yang ditunjuk dengan tujuan interoperabilitas sistem di lingkungan Pemerintah Kota Pontianak."><i class="remove_field">close</i></div>
+                    <div><input type="text" class="removable" value="Menambahkan field atau fitur yang dibutuhkan pada sistem yang dikelola masing-masing perangkat daerah sesuai kesepakatan pengembangan yang dibutuhkan untuk interoperabilitas sistem di lingkungan Pemerintah Kota Pontianak."><i class="remove_field">close</i></div>
+                </div>
                 <button class="add_field_button button pink">tambah poin</button>
             </label>
 
             <label>
                 Catatan
-                <textarea></textarea>
+                <textarea>Sekedar catatan kaki</textarea>
             </label>
             <button class="button theme form">Proses</button>
         </form>
