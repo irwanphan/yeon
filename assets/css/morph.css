@@ -614,6 +614,8 @@ table {
       max-width: 106px;
       max-height: 106px;
       overflow: hidden; }
+      .login .container .iconic img {
+        width: 100%; }
   .login .button {
     display: block;
     padding: 8px 16px;
