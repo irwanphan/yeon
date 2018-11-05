@@ -51,7 +51,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#table-document').DataTable( {
+            $('#table-opd').DataTable( {
                 responsive: true,
                 iDisplayLength: 20,
                 bLengthChange: false
@@ -86,104 +86,88 @@
 
 <header>
     <nav>
-        <a href="new.html" class="button theme">
+        <a href="index.html" class="button theme">
+            <i>home</i>
+            <span>Beranda</span>
+        </a>
+        <a href="newOpd.html" class="button theme">
             <i>add</i>
-            <span>Dokumen baru</span>
+            <span>OPD baru</span>
         </a>
     </nav>
 </header>
 
 <div class="main">
     <div class="container">
-        <span class="section-title">Daftar Dokumen Menunggu</span>
+        <span class="section-title">Daftar OPD</span>
 
-        <table id="table-document" class="display">
+        <table id="table-opd" class="display">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Tanggal</th>
-                    <th>Tentang</th>
-                    <th>Oleh</th>
-                    <th>Progress</th>
+                    <th>Kode</th>
+                    <th>Nama</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Not a lorem ipsum thing</td>
-                    <td>Anna Doe</td>
-                    <td>March 5,2016 10:18 <span class="bold">something happended</span></td>
+                    <td>Walikota</td>
+                    <td>Walikota</td>
                     <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
+                        <a href="viewOpd.html" class="button theme">
                             <i>edit</i>
                             Cek
+                        </a>
+                        <a href="viewOpd.html" class="button theme">
+                            <i>people</i>
+                            Atur Jabatan
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Told you not lorem ipsum</td>
-                    <td>Nina Doe</td>
-                    <td>March 5,2016 12:18 <span class="bold">verified</span></td>
+                    <td>Sekda</td>
+                    <td>Sekretaris Daerah</td>
                     <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
+                        <a href="viewOpd.html" class="button theme">
                             <i>edit</i>
                             Cek
+                        </a>
+                        <a href="viewOpd.html" class="button theme">
+                            <i>people</i>
+                            Atur Jabatan
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>March 2,2016 10:18</td>
-                    <td>Surveying local market</td>
-                    <td>Anna Doe</td>
-                    <td>March 5,2016 12:34 <span class="bold">approved</span></td>
+                    <td>Diskominfo</td>
+                    <td>Dinas Komunikasi dan Informatika</td>
                     <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
+                        <a href="viewOpd.html" class="button theme">
                             <i>edit</i>
                             Cek
+                        </a>
+                        <a href="viewOpd.html" class="button theme">
+                            <i>people</i>
+                            Atur Jabatan
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>March 2,2016 10:18</td>
-                    <td>Gotta eat lobster</td>
-                    <td>Eddy Doe</td>
-                    <td>March 5,2016 12:22 <span class="bold">checkup for LDL</span></td>
+                    <td>BKD</td>
+                    <td>Badan Kepegawaian Daerah</td>
                     <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
+                        <a href="viewOpd.html" class="button theme">
                             <i>edit</i>
                             Cek
                         </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Lorem what?</td>
-                    <td>Hectic Doe</td>
-                    <td></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Nope, no more please</td>
-                    <td>Joanna Doe</td>
-                    <td></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
+                        <a href="viewOpd.html" class="button theme">
+                            <i>people</i>
+                            Atur Jabatan
                         </a>
                     </td>
                 </tr>

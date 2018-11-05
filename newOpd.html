@@ -66,6 +66,7 @@
     <!-- <a href="templates.html">Templates</a> -->
     <a href="users.html">Users</a>
     <a href="roles.html">Roles</a>
+    <a href="opd.html">OPD</a>
     <hr>
     <a href="login.html">Log out</a>
 
@@ -74,7 +75,7 @@
 
 <header>
     <nav>
-        <a href="viewUser.html" class="button theme">
+        <a href="opd.html" class="button theme">
             <i>close</i>
             <span>Batal</span>
         </a>
@@ -83,110 +84,33 @@
 
 <div class="main">
     <div class="container">
-        <span class="section-title">Informasi pengguna</span>
+        <span class="section-title">Informasi Organisasi</span>
 
         <form class="form-default">
             <label>
+                Kode
+                <input type="text" name="">
+            </label>
+            <label>
                 Nama
-                <input type="text" name="" value="John Doe">
+                <input type="text" name="">
             </label>
             <label>
-                Jabatan
-                <input type="text" name="" value="Walikota">
+                Alamat
+                <input type="email" name="">
             </label>
             <label>
-                Golongan
-                <input type="text" name="" value="X">
-            </label>
-            <label>
-                Email
-                <input type="email" name="" value="john@doe.com">
-            </label>
-            <label>
-                Nomor kontak
-                <input type="text" name="" value="0987654321">
-            </label>
-            <label>
-                Atasan langsung
-                <select>
-                    <option></option>
-                    <option selected>John Doe</option>
-                    <option>Anne Doe</option>
-                </select>
+                Telepon
+                <input type="text" name="">
             </label>
 
-            <div class="checklist">
-
-                <hr>
-                <small>Hak akses umum</small>
-
-                <label>
-                    Username
-                    <input type="text" name="" value="JohnDoe">
-                </label>
-                <label>
-                    Password lama
-                    <input type="Password" name="" value="">
-                </label>
-                <label>
-                    Password baru
-                    <input type="Password" name="" value="">
-                </label>
-                <label>
-                    Password baru lagi
-                    <input type="Password" name="" value="">
-                </label>
-
-                <label>
-                    <input type="checkbox" name="" checked>
-                    <i>check_circle</i>
-                    Menambah / mengubah user
-                </label>
-                <label>
-                    <input type="checkbox" name="">
-                    <i>check_circle</i>
-                    Melihat semua surat
-                </label>
-                <label>
-                    <input type="checkbox" name="" checked>
-                    <i>check_circle</i>
-                    Menambah / mengubah surat
-                </label>
-
-                <hr>
-                <small>Jenis surat yang dapat diakses</small>
-
-                <label>
-                    <input type="checkbox" name="" checked>
-                    <i>check_circle</i>
-                    Surat undangan
-                </label>
-                <label>
-                    <input type="checkbox" name="" checked>
-                    <i>check_circle</i>
-                    Surat pengantar
-                </label>
-                <label>
-                    <input type="checkbox" name="" checked>
-                    <i>check_circle</i>
-                    Surat perintah
-                </label>
-                <label>
-                    <input type="checkbox" name="">
-                    <i>check_circle</i>
-                    Suratan takdir
-                </label>
-
-            </div>
-
-
-            <hr>
             <button class="button theme form">Simpan Data</button>
-            
+            <button class="button theme form">Simpan dan Atur Rantai Jabatan</button>
+
             <div>
 
                 <hr>
-                <small>Upload tanda tangan (file PNG)</small>
+                <small>Upload kop surat (file PNG)</small>
 
                 <div class="file-upload">
                     <div class="file-select">
@@ -198,25 +122,6 @@
                 <br>
                 <button class="button theme form">Upload</button>
             </div>
-            <br>
-
-            <div>
-
-                <hr>
-                <small>Upload sertifikat tanda tangan (file P12)</small>
-
-                <div class="file-upload">
-                    <div class="file-select">
-                        <div class="file-select-button" id="fileName">Nama file</div>
-                        <div class="file-select-name" id="noFile">Belum ada file...</div> 
-                        <input type="file" name="import_file" id="chooseFile">
-                    </div>
-                </div>
-                <br>
-                <button class="button theme form">Upload</button>
-            </div>
-            <br>
-
         </form>
     </div>
 </div>
