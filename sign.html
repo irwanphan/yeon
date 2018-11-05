@@ -52,7 +52,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#table-document').DataTable( {
-                responsive: true,
+                responsive: false,
                 iDisplayLength: 20,
                 bLengthChange: false
             } );
@@ -86,22 +86,39 @@
 
 <header>
     <nav>
-        <a href="new.html" class="button theme">
-            <i>add</i>
-            <span>Dokumen baru</span>
+        <a href="index.html" class="button theme">
+            <i>close</i>
+            <span>Batal</span>
         </a>
-        <a href="sign.html" class="button theme">
-            <i>ballot</i>
-            <span>Daftar dokumen siap</span>
+        <a class="button theme popup-toggle" id="tandatangan">
+            <i>gesture</i>
+            <span>Tanda tangan</span>
         </a>
     </nav>
 </header>
 
+<div class="popup hidden" id="tandatangan-modal">
+    <div class="modal">
+        <!-- content here -->
+        <span class="section-title">
+            tanda tangan
+        </span>
+        <div class="form-default">
+            <label>
+                Masukkan kode para-frase
+                <input type="text" name="" placeholder="kode parafrase*">
+                <button class="button theme form">kirim</button>
+            </label>
+        </div>
+    </div>
+    <div class="modal-close popup-toggle"><i>close</i></div>
+</div>
+
 <div class="main">
     <div class="container">
-        <span class="section-title">Daftar Dokumen Menunggu</span>
+        <span class="section-title">Daftar Dokumen Siap</span>
 
-        <table id="table-document" class="display">
+        <table id="table-document" class="display checklist">
             <thead>
                 <tr>
                     <th>#</th>
@@ -109,87 +126,34 @@
                     <th>Tentang</th>
                     <th>Oleh</th>
                     <th>Progress</th>
-                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Not a lorem ipsum thing</td>
-                    <td>Anna Doe</td>
-                    <td>March 5,2016 10:18 <span class="bold">something happended</span></td>
                     <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
+                        <label>
+                            <input type="checkbox" name="">
+                            <i>check_circle</i>
+                            1
+                        </label>
                     </td>
-                </tr>
-                <tr>
-                    <td>2</td>
                     <td>March 1,2016 10:18</td>
                     <td>Told you not lorem ipsum</td>
                     <td>Nina Doe</td>
                     <td>March 5,2016 12:18 <span class="bold">verified</span></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="">
+                            <i>check_circle</i>
+                            2
+                        </label>
+                    </td>
                     <td>March 2,2016 10:18</td>
                     <td>Surveying local market</td>
                     <td>Anna Doe</td>
                     <td>March 5,2016 12:34 <span class="bold">approved</span></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>March 2,2016 10:18</td>
-                    <td>Gotta eat lobster</td>
-                    <td>Eddy Doe</td>
-                    <td>March 5,2016 12:22 <span class="bold">checkup for LDL</span></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Lorem what?</td>
-                    <td>Hectic Doe</td>
-                    <td></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>March 1,2016 10:18</td>
-                    <td>Nope, no more please</td>
-                    <td>Joanna Doe</td>
-                    <td></td>
-                    <td>
-                        <a href="viewSuratUndangan.html" class="button theme">
-                            <i>edit</i>
-                            Cek
-                        </a>
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -200,9 +164,25 @@
 
 </footer>
 
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+    $(document).on('click', '.popup-toggle', function() {
+        // get id from clicker
+        togglePopup( this.id );
+    });
+    function togglePopup( id )
+    {
+        // $('.popup').toggleClass( 'hidden popup-toggle' );
+        // paste the id to enable modal view
+        $('#'+id+'-modal.popup').removeClass( 'hidden' );
+        if ( id=="" ) {
+            // if the .popup does not has .hidden class
+            if (!($('.popup').hasClass( '.hidden' ) )) {
+                // give em hidden class
+                $('.popup').addClass( 'hidden' );
+            }
+        }
+    }
+</script>
 
 </body>
 
