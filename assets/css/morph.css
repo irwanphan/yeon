@@ -646,7 +646,8 @@ table {
     padding: 2px 16px;
     margin: 4px;
     border-bottom: 2px solid #a8e6cf;
-    background-color: #effaf6; }
+    background-color: #effaf6;
+    cursor: pointer; }
     .simple-hi li span small {
       font-size: 12px;
       display: block;

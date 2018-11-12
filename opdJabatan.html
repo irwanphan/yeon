@@ -82,6 +82,23 @@
     </nav>
 </header>
 
+<div class="popup hidden" id="tandatangan-modal">
+    <div class="modal">
+        <!-- content here -->
+        <span class="section-title">
+            tanda tangan
+        </span>
+        <div class="form-default">
+            <label>
+                Masukkan kode
+                <input type="text" name="" placeholder="kode parafrase*">
+                <button class="button theme form">kirim</button>
+            </label>
+        </div>
+    </div>
+    <div class="modal-close popup-toggle"><i>close</i></div>
+</div>
+
 <div class="main">
     <div class="container">
         <span class="section-title">Daftar Jabatan [OPD]</span>
@@ -150,12 +167,32 @@
     </div>
 </div>
 
-<footer>
-
-</footer>
-
 </body>
 
+
+<script type="text/javascript">
+    $(document).on('click', '.popup-toggle', function() {
+        // get id from clicker
+        togglePopup( this.id );
+    });
+    $(document).on('click', '.simple-hi li span', function() {
+        
+    });
+    function togglePopup( id )
+    {
+        // $('.popup').toggleClass( 'hidden popup-toggle' );
+        // paste the id to enable modal view
+        $('#'+id+'-modal.popup').removeClass( 'hidden' );
+        if ( id=="" ) {
+            // if the .popup does not has .hidden class
+            if (!($('.popup').hasClass( '.hidden' ) )) {
+                // give em hidden class
+                $('.popup').addClass( 'hidden' );
+            }
+        }
+    }
+
+</script>
 </html>
 
 

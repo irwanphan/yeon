@@ -33,7 +33,6 @@
     ================================================== -->
 
     <link rel="stylesheet" type="text/css" href="assets/css/morph.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -43,11 +42,6 @@
     <!-- Included javascript files 
     ================================================== -->
     
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-    <script type="text/javascript">
-        
-    </script>
 </head>
 
 <body>
@@ -112,20 +106,5 @@
 </div>
 
 </body>
-
-<script type="text/javascript">
-    // override input [file]
-    $('#chooseFile').bind('change', function () {
-        var filename = $("#chooseFile").val();
-        if (/^\s*$/.test(filename)) {
-            $(".file-upload").removeClass('active');
-            $("#noFile").text("No file chosen..."); 
-        }
-        else {
-            $(".file-upload").addClass('active');
-            $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
-        }
-    });
-</script>
 
 </html>
