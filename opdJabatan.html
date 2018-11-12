@@ -82,7 +82,7 @@
     </nav>
 </header>
 
-<div class="popup hidden" id="tandatangan-modal">
+<div class="popup hidden">
     <div class="modal">
         <!-- content here -->
         <span class="section-title">
@@ -172,8 +172,7 @@
 
 <script type="text/javascript">
     $(document).on('click', '.popup-toggle', function() {
-        // get id from clicker
-        togglePopup( this.id );
+        togglePopup();
     });
     $(document).on('click', '.simple-hi li span', function() {
         // get Jabatan
@@ -187,20 +186,13 @@
             .text() //get the text of element
             .trim() //removes whitespace from both sides of a string
             ;
+        console.log( small_text, text );
+        togglePopup( small_text, text );
         
     });
-    function togglePopup( id )
+    function togglePopup( post, name )
     {
-        // $('.popup').toggleClass( 'hidden popup-toggle' );
-        // paste the id to enable modal view
-        $('#'+id+'-modal.popup').removeClass( 'hidden' );
-        if ( id=="" ) {
-            // if the .popup does not has .hidden class
-            if (!($('.popup').hasClass( '.hidden' ) )) {
-                // give em hidden class
-                $('.popup').addClass( 'hidden' );
-            }
-        }
+        $('.popup').toggleClass( 'hidden' );
     }
 
 </script>
