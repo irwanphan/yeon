@@ -176,6 +176,10 @@
         togglePopup( this.id );
     });
     $(document).on('click', '.simple-hi li span', function() {
+        // get Jabatan
+        var small_text = $(this).find("small")[0].textContent;
+        // get Name
+        var text = $(this).clone().children().remove().end().text().trim();
         
     });
     function togglePopup( id )
