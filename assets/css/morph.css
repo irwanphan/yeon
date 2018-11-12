@@ -60,6 +60,8 @@
 .container {
   width: 100%;
   padding: 16px; }
+  .container.tree {
+    max-width: 100% !important; }
 
 .hidden {
   display: none; }
@@ -635,6 +637,44 @@ table {
     .login .app-title-area .app-title-sub {
       font-size: 12px;
       display: block; }
+
+.simple-hi li {
+  position: relative; }
+  .simple-hi li span {
+    font-weight: 400;
+    display: inline-block;
+    padding: 2px 16px;
+    margin: 4px;
+    border-bottom: 2px solid #a8e6cf;
+    background-color: #effaf6; }
+    .simple-hi li span small {
+      font-size: 12px;
+      display: block;
+      text-transform: uppercase;
+      border-bottom: 1px solid #888;
+      margin-bottom: 4px; }
+.simple-hi .post ul {
+  padding-left: 16px; }
+  .simple-hi .post ul li:before {
+    display: block;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    height: 24px;
+    width: 8px;
+    content: "";
+    border-left: 2px solid #ffd3b6;
+    border-bottom: 2px solid #ffd3b6; }
+  .simple-hi .post ul li:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: -4px;
+    left: -4px;
+    bottom: 0;
+    border-left: 2px solid #ffd3b6; }
+  .simple-hi .post ul li:last-child:after {
+    display: none; }
 
 .go-back .face {
   position: absolute;

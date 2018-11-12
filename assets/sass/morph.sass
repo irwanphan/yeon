@@ -123,6 +123,8 @@ $browsers: '', '-o-', '-ms-', '-moz-', '-webkit-'
 .container
 	width: 100%
 	padding: 16px
+	&.tree
+		max-width: 100% !important
 
 // quick fix
 // grid fix
@@ -590,6 +592,49 @@ table
 		.app-title-sub
 			font-size: 12px
 			display: block
+
+.simple-hi
+	li
+		position: relative
+		span
+			font-weight: 400
+			display: inline-block
+			padding: 2px 16px
+			margin: 4px
+			border-bottom: 2px solid $theme
+			background-color: lighten($theme, 18%)
+			small
+				font-size: 12px
+				display: block
+				text-transform: uppercase
+				border-bottom: 1px solid $grey
+				margin-bottom: 4px
+	.post
+		ul
+			padding-left: 16px
+			li
+				&:before
+					display: block
+					position: absolute
+					top: -4px
+					left: -4px
+					height: 24px
+					width: 8px
+					content: ""
+					border-left: 2px solid $pink
+					border-bottom: 2px solid $pink
+				&:after
+					display: block
+					position: absolute
+					content: ""
+					top: -4px
+					left: -4px
+					bottom: 0
+					border-left: 2px solid $pink
+				&:last-child:after
+					display: none
+
+
 // forbidden
 .go-back
 	.face
