@@ -179,7 +179,14 @@
         // get Jabatan
         var small_text = $(this).find("small")[0].textContent;
         // get Name
-        var text = $(this).clone().children().remove().end().text().trim();
+        var text = $(this)
+            .clone() //clone the element
+            .children() //select all the children
+            .remove() //remove all the children
+            .end() //again go back to selected element
+            .text() //get the text of element
+            .trim() //removes whitespace from both sides of a string
+            ;
         
     });
     function togglePopup( id )
