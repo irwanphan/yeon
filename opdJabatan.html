@@ -83,18 +83,24 @@
 </header>
 
 <div class="popup hidden">
-    <div class="modal">
+    <div class="modal form-default">
         <!-- content here -->
         <span class="section-title">
-            tanda tangan
+            Jabatan <a id="jabatan"></a>
         </span>
         <div class="form-default">
             <label>
-                Masukkan kode
-                <input type="text" name="" placeholder="kode parafrase*">
-                <button class="button theme form">kirim</button>
+                Diisi oleh
+                <select id="nama">
+                    <option value="" disabled>Pilih salah satu</option>
+                    <option value="Proto Man">Proto Man</option>
+                    <option value="Dr Willy">Dr Willy</option>
+                    <option value="Axl">Axl</option>
+                    <option value="Snake Man">Snake Man</option>
+                </select>
             </label>
         </div>
+        <button class="button theme form">Simpan Data</button>
     </div>
     <div class="modal-close popup-toggle"><i>close</i></div>
 </div>
@@ -193,6 +199,17 @@
     function togglePopup( post, name )
     {
         $('.popup').toggleClass( 'hidden' );
+        $('.popup #jabatan').text(post);
+
+        // if no one selected
+        $('#nama option').filter(function(){
+            return this.value == "";
+        }).prop("selected", true);
+
+        // if someone were
+        $('#nama option').filter(function(){
+            return this.value == name;
+        }).prop("selected", true);
     }
 
 </script>
