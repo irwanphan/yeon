@@ -317,6 +317,8 @@ i {
     line-height: 28px; }
     .form-default span.info:last-child {
       margin-bottom: 12px; }
+  .form-default a.button {
+    padding: 5px 8px; }
 
 .checklist label {
   cursor: pointer;
