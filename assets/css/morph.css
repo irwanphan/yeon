@@ -485,12 +485,28 @@ header {
     top: 0;
     height: 50px; }
     header nav .button {
-      background-color: transparent !important; }
+      background-color: transparent !important;
+      position: relative; }
       header nav .button:hover, header nav .button:active, header nav .button:focus {
         color: #82B1FF !important; }
+        header nav .button:hover:before, header nav .button:active:before, header nav .button:focus:before {
+          left: 0;
+          right: 0; }
       header nav .button:before {
+        margin: 0 auto;
         content: "";
-        position: absolute; }
+        position: absolute;
+        bottom: 0;
+        right: 40px;
+        left: 40px;
+        box-shadow: 0 -3px 0 0 #82B1FF;
+        display: block;
+        height: 2px;
+        transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease; }
       header nav .button i, header nav .button span {
         display: inline-block; } }
 footer.notice {

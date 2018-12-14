@@ -464,11 +464,23 @@ header
 		nav
 			.button
 				background-color: transparent !important
+				position: relative
 				&:hover, &:active, &:focus
 					color: $theme !important
+					&:before
+						left: 0
+						right: 0
 				&:before
+					margin: 0 auto
 					content: ""
 					position: absolute
+					bottom: 0
+					right: 40px
+					left: 40px
+					box-shadow: 0 -3px 0 0 $theme
+					display: block
+					height: 2px
+					+transitions(.3s)
 				i, span
 					display: inline-block
 footer
