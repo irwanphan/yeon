@@ -211,7 +211,7 @@ input[type="radio"], input[type="submit"], input[type="checkbox"], a
 i
 	+materialicons
 .button
-	+borderradius(20px)
+	+borderradius(4px)
 	text-align: center
 	display: inline-block
 	margin-bottom: 4px
@@ -272,7 +272,7 @@ i
 	select, input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], textarea
 		border: 1px solid darken($grey-light, 10%)
 		padding: 6px 12px
-		+borderradius(16px)
+		+borderradius(4px)
 		display: block
 		width: 100%
 		margin-bottom: 6px
@@ -281,7 +281,7 @@ i
 	textarea
 		resize: none
 		height: 108px
-		+borderradius(16px)
+		+borderradius(4px)
 		width: 100%
 		font-family: $font-family
 	select
@@ -461,9 +461,16 @@ header
 		// background-color: $white-min
 		top: 0
 		height: 50px
-		nav	.button
-			i, span
-				display: inline-block
+		nav
+			.button
+				background-color: transparent !important
+				&:hover, &:active, &:focus
+					color: $theme !important
+				&:before
+					content: ""
+					position: absolute
+				i, span
+					display: inline-block
 footer
 	&.notice
 		background-color: $theme
@@ -523,7 +530,7 @@ table
 		float: left
 		input[type="search"]
 			+boxsizing
-			+borderradius(20px)
+			+borderradius(4px)
 			padding: 6px 12px
 			border: 1px solid $theme
 	&_paginate, &_info
@@ -531,12 +538,12 @@ table
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover
 	background: none !important
 	border: 1px solid $theme !important
-	+borderradius(16px)
+	+borderradius(4px)
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:active
 	// color: $white !important
 	background: $theme !important
 	border: 1px solid $theme !important
-	+borderradius(16px)
+	+borderradius(4px)
 .dataTables_wrapper .dataTables_paginate .paginate_button
 	+borderradius()
 
@@ -559,7 +566,7 @@ table
 		padding-top: 48px
 		background-color: $white
 		@media(min-width: 641px)
-			+borderradius(30px)
+			+borderradius(12px)
 		.iconic
 			color: $grey
 			font-size: 64px
@@ -762,7 +769,7 @@ table
 		.modal
 			width: 960px
 			margin: 60px auto
-			+borderradius(16px)
+			+borderradius(8px)
 		.modal-close
 			right: 32px
 			top: 32px

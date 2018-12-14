@@ -177,11 +177,11 @@ i {
   -moz-osx-font-smoothing: grayscale; }
 
 .button {
-  border-radius: 20px;
-  -o-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   text-align: center;
   display: inline-block;
   margin-bottom: 4px;
@@ -262,11 +262,11 @@ i {
   .form-default select, .form-default input[type="text"], .form-default input[type="email"], .form-default input[type="number"], .form-default input[type="password"], .form-default input[type="search"], .form-default textarea {
     border: 1px solid #c5c5c5;
     padding: 6px 12px;
-    border-radius: 16px;
-    -o-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
     display: block;
     width: 100%;
     margin-bottom: 6px; }
@@ -275,11 +275,11 @@ i {
   .form-default textarea {
     resize: none;
     height: 108px;
-    border-radius: 16px;
-    -o-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
     width: 100%;
     font-family: Roboto, "Segoe UI", "open sans", arial, sans-serif; }
   .form-default select {
@@ -484,8 +484,15 @@ header {
   header {
     top: 0;
     height: 50px; }
-    header nav .button i, header nav .button span {
-      display: inline-block; } }
+    header nav .button {
+      background-color: transparent !important; }
+      header nav .button:hover, header nav .button:active, header nav .button:focus {
+        color: #82B1FF !important; }
+      header nav .button:before {
+        content: "";
+        position: absolute; }
+      header nav .button i, header nav .button span {
+        display: inline-block; } }
 footer.notice {
   background-color: #82B1FF;
   display: block;
@@ -543,11 +550,11 @@ table {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border-radius: 20px;
-    -o-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
     padding: 6px 12px;
     border: 1px solid #82B1FF; }
 #table-document_paginate, #table-document_info, #table-templates_paginate, #table-templates_info, #table-users_paginate, #table-users_info {
@@ -556,20 +563,20 @@ table {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
   background: none !important;
   border: 1px solid #82B1FF !important;
-  border-radius: 16px;
-  -o-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px; }
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   background: #82B1FF !important;
   border: 1px solid #82B1FF !important;
-  border-radius: 16px;
-  -o-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -webkit-border-radius: 16px; }
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   border-radius: 50%;
@@ -595,11 +602,11 @@ table {
     background-color: #fff; }
 @media(min-width: 641px) {
   .login .container {
-    border-radius: 30px;
-    -o-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px; } }
+    border-radius: 12px;
+    -o-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px; } }
     .login .container .iconic {
       color: #888;
       font-size: 64px;
@@ -843,11 +850,11 @@ table {
   .popup .modal {
     width: 960px;
     margin: 60px auto;
-    border-radius: 16px;
-    -o-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px; }
+    border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px; }
   .popup .modal-close {
     right: 32px;
     top: 32px;
