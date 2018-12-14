@@ -188,9 +188,9 @@ i {
   cursor: pointer; }
   .button.theme {
     color: #2e2e2e;
-    background-color: #a8e6cf; }
+    background-color: #82B1FF; }
     .button.theme:hover, .button.theme:active, .button.theme:focus {
-      background-color: #94e0c4; }
+      background-color: #69a1ff; }
   .button.pink {
     color: #2e2e2e;
     background-color: #ffd3b6; }
@@ -254,8 +254,8 @@ i {
       display: inline-block;
       padding: 2px 16px;
       margin: 4px;
-      border-bottom: 2px solid #a8e6cf;
-      background-color: #effaf6; }
+      border-bottom: 2px solid #82B1FF;
+      background-color: #deeaff; }
       .form-default > label span.imp {
         border-bottom: 2px solid #ffd3b6;
         background-color: #ffecdf; }
@@ -271,7 +271,7 @@ i {
     width: 100%;
     margin-bottom: 6px; }
     .form-default select:hover, .form-default select:active, .form-default select:focus, .form-default input[type="text"]:hover, .form-default input[type="text"]:active, .form-default input[type="text"]:focus, .form-default input[type="email"]:hover, .form-default input[type="email"]:active, .form-default input[type="email"]:focus, .form-default input[type="number"]:hover, .form-default input[type="number"]:active, .form-default input[type="number"]:focus, .form-default input[type="password"]:hover, .form-default input[type="password"]:active, .form-default input[type="password"]:focus, .form-default input[type="search"]:hover, .form-default input[type="search"]:active, .form-default input[type="search"]:focus, .form-default textarea:hover, .form-default textarea:active, .form-default textarea:focus {
-      border-color: #a8e6cf; }
+      border-color: #82B1FF; }
   .form-default textarea {
     resize: none;
     height: 108px;
@@ -342,17 +342,17 @@ i {
 .linklist a {
   display: block;
   padding: 16px;
-  border: 1px solid #a8e6cf;
+  border: 1px solid #82B1FF;
   border-bottom: 0; }
   .linklist a:last-child {
-    border-bottom: 1px solid #a8e6cf; }
+    border-bottom: 1px solid #82B1FF; }
   .linklist a:hover, .linklist a:active, .linklist a:focus {
     box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
     -o-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
     -ms-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
     -moz-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
     -webkit-box-shadow: 0 2px 1px 1px rgba(255, 255, 255, 0.168);
-    background-color: #a8e6cf; }
+    background-color: #82B1FF; }
 
 .input_fields_wrap {
   margin-right: 40px; }
@@ -404,7 +404,7 @@ label.user-profile {
     -ms-border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    background-color: #a8e6cf;
+    background-color: #82B1FF;
     display: inline-block;
     overflow: hidd; }
   label.user-profile .user-profile-name {
@@ -413,7 +413,7 @@ label.user-profile {
 @media(min-width: 721px) {
   label.user-profile {
     padding-right: 16px;
-    background-color: #ebf9f4;
+    background-color: #d9e7ff;
     margin: 4px 16px;
     width: auto;
     top: 0;
@@ -432,7 +432,7 @@ label.user-profile {
     display: block;
     padding: 8px 16px; }
     .side-menu a:hover, .side-menu a:active, .side-menu a:focus {
-      color: #a8e6cf; }
+      color: #82B1FF; }
   .side-menu hr {
     margin: 16px;
     border-color: #dedede; }
@@ -487,7 +487,7 @@ header {
     header nav .button i, header nav .button span {
       display: inline-block; } }
 footer.notice {
-  background-color: #a8e6cf;
+  background-color: #82B1FF;
   display: block;
   position: absolute;
   bottom: 0;
@@ -549,13 +549,13 @@ table {
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     padding: 6px 12px;
-    border: 1px solid #a8e6cf; }
+    border: 1px solid #82B1FF; }
 #table-document_paginate, #table-document_info, #table-templates_paginate, #table-templates_info, #table-users_paginate, #table-users_info {
   font-size: 12px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
   background: none !important;
-  border: 1px solid #a8e6cf !important;
+  border: 1px solid #82B1FF !important;
   border-radius: 16px;
   -o-border-radius: 16px;
   -ms-border-radius: 16px;
@@ -563,8 +563,8 @@ table {
   -webkit-border-radius: 16px; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .dataTables_wrapper .dataTables_paginate .paginate_button:active {
-  background: #a8e6cf !important;
-  border: 1px solid #a8e6cf !important;
+  background: #82B1FF !important;
+  border: 1px solid #82B1FF !important;
   border-radius: 16px;
   -o-border-radius: 16px;
   -ms-border-radius: 16px;
@@ -579,7 +579,7 @@ table {
   -webkit-border-radius: 50%; }
 
 .login {
-  background-color: #a8e6cf;
+  background-color: #82B1FF;
   display: block;
   position: absolute;
   top: 0;
@@ -611,7 +611,7 @@ table {
       -webkit-border-radius: 50%;
       position: absolute;
       background-color: #fff;
-      border: 5px solid #a8e6cf;
+      border: 5px solid #82B1FF;
       top: -64px;
       left: 50%;
       text-align: center;
@@ -647,8 +647,8 @@ table {
     display: inline-block;
     padding: 2px 16px;
     margin: 4px;
-    border-bottom: 2px solid #a8e6cf;
-    background-color: #effaf6;
+    border-bottom: 2px solid #82B1FF;
+    background-color: #deeaff;
     cursor: pointer; }
     .simple-hi li span small {
       font-size: 12px;
@@ -833,7 +833,7 @@ table {
   .popup .modal {
     top: 0;
     bottom: 0;
-    border-bottom: 8px solid #a8e6cf; } }
+    border-bottom: 8px solid #82B1FF; } }
   .popup .modal-close {
     position: fixed;
     right: 16px;
@@ -906,14 +906,14 @@ table {
       display: inline-block;
       padding: 0 10px; }
     .file-upload .file-select:hover {
-      border-color: #88ddbe; }
+      border-color: #5998ff; }
       .file-upload .file-select:hover .file-select-button {
-        background: #88ddbe;
+        background: #5998ff;
         color: #fff; }
   .file-upload.active .file-select {
-    border-color: #a8e6cf; }
+    border-color: #82B1FF; }
     .file-upload.active .file-select .file-select-button {
-      background: #a8e6cf;
+      background: #82B1FF;
       color: #fff; }
   .file-upload .file-select input[type=file] {
     z-index: 100;
